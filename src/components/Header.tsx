@@ -8,13 +8,13 @@ import Box from "@mui/material/Box";
 export default function Header() {
   return (
     <AppBar position="sticky" color="primary" elevation={2}>
-      <Toolbar>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1, fontWeight: 700 }}>
+      <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
+        <Typography variant="h6" component="div" sx={{ fontWeight: 700 }}>
           <Link href="/" style={{ color: 'inherit', textDecoration: 'none' }}>
             Community Empowerment
           </Link>
         </Typography>
-        <Box sx={{ display: 'flex', gap: 2 }}>
+        <Box sx={{ display: 'flex', gap: 3 }}>
           <Button color="inherit" component={Link} href="#our-story">Our Story</Button>
           <Button color="inherit" component={Link} href="#what-we-do">What We Do</Button>
           <Button color="inherit" component={Link} href="#get-involved">Get Involved</Button>

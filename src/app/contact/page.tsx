@@ -1,22 +1,19 @@
 import React from 'react';
-import styles from './contact.module.css';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 export default function ContactPage() {
   return (
-    <main className={styles.container}>
-      <h1>Contact Us</h1>
-      <form className={styles.form}>
-        <label htmlFor="name" className={styles.label}>Name:</label>
-        <input type="text" id="name" name="name" required className={styles.input} />
-
-        <label htmlFor="email" className={styles.label}>Email:</label>
-        <input type="email" id="email" name="email" required className={styles.input} />
-
-        <label htmlFor="message" className={styles.label}>Message:</label>
-        <textarea id="message" name="message" rows={4} required className={styles.textarea} />
-
-        <button type="submit" className={styles.button}>Send</button>
-      </form>
-    </main>
+    <Box sx={{ maxWidth: 500, mx: 'auto', my: 6, p: 3, bgcolor: 'background.paper', borderRadius: 2, boxShadow: 2 }}>
+      <Typography variant="h4" color="primary" fontWeight={700} mb={3} textAlign="center">Contact Us</Typography>
+      <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+        <TextField label="Name" name="name" required fullWidth />
+        <TextField label="Email" name="email" type="email" required fullWidth />
+        <TextField label="Message" name="message" multiline rows={4} required fullWidth />
+        <Button type="submit" variant="contained" color="primary" sx={{ mt: 2 }}>Send</Button>
+      </Box>
+    </Box>
   );
 }
