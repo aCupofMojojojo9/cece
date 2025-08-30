@@ -16,6 +16,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { useState, useEffect } from "react";
 import CardMedia from "@mui/material/CardMedia";
+import HomeIcon from "@mui/icons-material/Home";
 
 
 const navLinks = [
@@ -81,9 +82,11 @@ export default function Header() {
           ) : (
             <Box sx={{ display: "flex", gap: 4 }}>
               {navLinks.map((link) => (
-                <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ fontWeight: 700 }}>
-                  {link.label}
-                </Button>
+                link.label === "Home"
+                  ? <IconButton key={link.label} color="inherit" component={Link} href={link.href}><HomeIcon /></IconButton>
+                  : <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ fontWeight: 700 }}>
+                      {link.label}
+                    </Button>
               ))}
             </Box>
           )}
