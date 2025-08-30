@@ -11,7 +11,6 @@ export default function HomeContent() {
   return (
     <Container maxWidth="lg" sx={{ pt: 4, pb: 4 }}>
       <Box sx={{ textAlign: 'center', mb: 6 }}>
-        <Image src="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png" alt="CECE's Dream Logo" width={180} height={180} priority />
         <Typography variant="h3" fontWeight={700} mt={2} mb={1} color="primary">Empowering dreams.<br />Building futures.</Typography>
         <Typography variant="h5" color="text.secondary">A nonprofit organization</Typography>
       </Box>
