@@ -33,23 +33,28 @@ export default function Header() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [shrunk, setShrunk] = useState(false);
-  const toolbarHeight = isMobile ? (shrunk ? 92 : 300) : 160;
 
   useEffect(() => {
-    if (!isMobile) {
-      setShrunk(false);
-      return;
-    }
     const handleScroll = () => {
-      if (window.scrollY > 300 && !shrunk) {
-        setShrunk(true);
-      } else if (window.scrollY < 300 && shrunk) {
-        setShrunk(false);
+      if (isMobile) {
+        if (window.scrollY > 260 && !shrunk) {
+          setShrunk(true);
+        } else if (window.scrollY <= 260 && shrunk) {
+          setShrunk(false);
+        }
+      } else {
+        if (window.scrollY > 140 && !shrunk) {
+          setShrunk(true);
+        } else if (window.scrollY <= 140 && shrunk) {
+          setShrunk(false);
+        }
       }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile, shrunk]);
+
+  const toolbarHeight = shrunk ? 92 : (isMobile ? 300 : 160);
 
   return (
     <AppBar position="sticky" color="primary" elevation={0}>
@@ -80,11 +85,11 @@ export default function Header() {
               </Drawer>
             </Box>
           ) : (
-            <Box sx={{ display: "flex", gap: 4 }}>
+            <Box sx={{ display: "flex", gap: 1, justifyContent: "flex-end", width: "100%" }}>
               {navLinks.map((link) => (
                 link.label === "Home"
-                  ? <IconButton key={link.label} color="inherit" component={Link} href={link.href}><HomeIcon /></IconButton>
-                  : <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ fontWeight: 700 }}>
+                  ? <IconButton key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5 }}><HomeIcon /></IconButton>
+                  : <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5 }}>
                       {link.label}
                     </Button>
               ))}
