@@ -10,8 +10,7 @@ import DonateSection from "./DonateSection";
 
 export default function HomeContent() {
   return (
-    <Container maxWidth="xl" sx={{ pt: 4, pb: 4, pl: { xs: 0, sm: 0 }, pr: { xs: 0, sm: 0 } }}>
-
+    <Container maxWidth="xl" sx={{ pt: 4, pl: { xs: 0, sm: 0 }, pr: { xs: 0, sm: 0 } }}>
       <Box sx={{ textAlign: 'center', mb: 6 }}>
         <Typography variant="h3" fontWeight={700} mt={2} mb={1} color="primary">Empowering dreams.<br />Building futures.</Typography>
         <Typography variant="h5" color="text.secondary">A nonprofit organization</Typography>
@@ -81,6 +80,16 @@ export default function HomeContent() {
       </Box>
 
       <DonateSection />
+      <Box>
+        <CardMedia
+          component="img"
+          image="https://cecesdream.org/_assets/media/68d5836d0cf8c4943ec17ad96ddc2547.jpg"
+          alt="Children Reading Books"
+          sx={{ width: "100%",
+          height: { xs: 180, sm: 270, md: 470 },
+          objectFit: "cover"}}
+        />
+      </Box>
     </Container>
   );
 }

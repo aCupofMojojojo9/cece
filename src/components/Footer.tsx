@@ -15,45 +15,51 @@ import { useTheme } from "@mui/material/styles";
 export default function Footer() {
   const theme = useTheme();
   return (
-    <Box component="footer" sx={{ background: theme.palette.primary.main, color: theme.palette.primary.contrastText, pt: 6, pb: 2, mt: 8 }}>
-      <Box sx={{ maxWidth: 1200, mx: 'auto', display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'flex-start', gap: 4, px: 2 }}>
-        {/* Mission Section */}
-        <Box sx={{ flex: 1, minWidth: 220, mb: { xs: 4, md: 0 } }}>
-          <Typography variant="h6" fontWeight={700} mb={2} color="secondary.main">Our Mission</Typography>
-          <Typography variant="body2">
-            CECE Dream provides educational needs to those with no options, breaking the cycle of lost childhoods and giving hope for generations to come.
-          </Typography>
-        </Box>
+    <Box component="footer" sx={{ background: theme.palette.primary.main, color: theme.palette.primary.contrastText, pt: 6, pb: 0, }}>
+      <Box
+        sx={{
+          mx: 'auto',
+          flexDirection: { xs: 'column', md: 'row' },
+          gap: 4,
+          px: '10%',
+          display: 'flex',
+        }}
+      >
         {/* Social Section */}
-        <Box sx={{ flex: 1, minWidth: 220, textAlign: 'center', mb: { xs: 4, md: 0 } }}>
-          <Typography variant="h6" fontWeight={700} mb={2} color="secondary.main">Get Social With Us</Typography>
+        <Box sx={{ width: { xs: '100%', md: '50%' },
+            flexShrink: 0, textAlign: 'center' }}>
+          <Typography variant="h3" fontWeight={700} mb={2} color="white">
+            Get Social With Us
+          </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
-            <IconButton size="large" sx={{ background: theme.palette.secondary.main, '&:hover': { background: theme.palette.secondary.dark } }}><FacebookIcon sx={{ color: theme.palette.primary.contrastText }} /></IconButton>
-            <IconButton size="large" sx={{ background: theme.palette.secondary.main, '&:hover': { background: theme.palette.secondary.dark } }}><InstagramIcon sx={{ color: theme.palette.primary.contrastText }} /></IconButton>
-            <IconButton size="large" sx={{ background: theme.palette.secondary.main, '&:hover': { background: theme.palette.secondary.dark } }}><LinkedInIcon sx={{ color: theme.palette.primary.contrastText }} /></IconButton>
-            <IconButton size="large" sx={{ background: theme.palette.secondary.main, '&:hover': { background: theme.palette.secondary.dark } }}><YouTubeIcon sx={{ color: theme.palette.primary.contrastText }} /></IconButton>
+            <IconButton size="large" sx={{ background: '#1877F3' }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ background: '#0A66C2' }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ background: '#E1306C' }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ background: '#FF0000' }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
           </Box>
-          <Typography variant="body2">
+          <Typography variant="body2" color="white">
             Come be a part of this amazing effort being led by CECE Dream. You will be happy that you did!
           </Typography>
         </Box>
+
         {/* Contact Section */}
-        <Box sx={{ flex: 1, minWidth: 220 }}>
-          <Typography variant="h6" fontWeight={700} mb={2} color="secondary.main">Contact CECE Dream</Typography>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <LocationOnIcon sx={{ mr: 1, color: theme.palette.secondary.main }} />
-            <Typography variant="body2">Kansas City, MO, USA</Typography>
+        <Box sx={{ width: { xs: '100%', md: '50%' },
+            flexShrink: 0, textAlign: 'center', justifyContent: 'center'}}>
+          <Typography variant="h3" fontWeight={700} mb={2} color="white">
+            Contact CECE Dream
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, justifyContent: 'center' }}>
+            <LocationOnIcon sx={{ mr: 1, color: 'white' }} />
+            <Typography variant="body2" color="white">Kansas City, MO, USA</Typography>
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-            <EmailIcon sx={{ mr: 1, color: theme.palette.secondary.main }} />
-            <Typography variant="body2">cece@cecesdream.org</Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, justifyContent: 'center' }}>
+            <EmailIcon sx={{ mr: 1, color: 'white' }} />
+            <Typography variant="body2" color="white">cece@cecesdream.org</Typography>
           </Box>
-          <Button variant="contained" color="secondary" href="/donate" sx={{ mt: 2, fontWeight: 700, borderRadius: 2 }}>
-            Donate
-          </Button>
+          <Button variant="contained" sx={{backgroundColor: 'rgb(255, 222, 89)', color: 'black', width: '200px', fontWeight: 700, mb: 1}} href="https://donorbox.org/cece-790449" target="_blank">Donate today</Button>
         </Box>
       </Box>
-      <Box sx={{ background: theme.palette.background.paper, color: theme.palette.text.primary, textAlign: 'center', py: 2, mt: 6, fontSize: '1rem', borderRadius: 2 }}>
+      <Box sx={{ background: theme.palette.background.paper, color: theme.palette.text.primary, textAlign: 'center', py: 1, mt: 6, fontSize: '1rem', borderRadius: 0 }}>
         CECE is a 501(c)(3) nonprofit organization and all donations are tax-deductible. © 2025 Community Empowerment & Childhood Education
       </Box>
     </Box>
