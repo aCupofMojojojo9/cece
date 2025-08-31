@@ -21,12 +21,12 @@ import HomeIcon from "@mui/icons-material/Home";
 
 
 const navLinks = [
-    { label: "Home", href: "/" },
+    { label: "Home", href: "/cece/" },
     { label: "Our story", href: "#our-story" },
     { label: "What we do", href: "#what-we-do" },
     { label: "Get involved", href: "#get-involved" },
-    { label: "Our Team", href: "/our-team" },
-    { label: "Contact Us", href: "/contact-us" },
+    { label: "Our Team", href: "/cece/our-team" },
+    { label: "Contact Us", href: "/cece/contact-us" },
 ];
 
 export default function Header() {
