@@ -8,6 +8,7 @@ import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 import SectionWithImage from "./SectionWithImage";
 import StackedImageSection from "./StackedImageSection";
+import DonateSection from "./DonateSection";
 
 export default function HomeContent() {
   return (
@@ -83,12 +84,7 @@ export default function HomeContent() {
         </Box>
       </Box>
 
-      <Box sx={{ textAlign: 'center', mt: 8, mb: 8 }}>
-        <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Support Our Mission</Typography>
-        <Typography paragraph>Thank you for supporting CECE Dream. Your generosity makes our mission possible. Whether you&apos;d like to give once, contribute monthly, or sponsor a child, click the button below to get started. Every gift makes a difference.</Typography>
-        <Button variant="contained" color="primary" href="https://donorbox.org/cece-790449" target="_blank" sx={{ mt: 2, mb: 2 }}>Donate today</Button>
-        <Typography variant="body2" color="text.secondary">CECE is a 501(c)(3) nonprofit organization and all donations are tax-deductible.</Typography>
-      </Box>
+      <DonateSection />
 
       <Box sx={{ mt: 8 }}>
         <Typography variant="h4" color="primary" fontWeight={700} mb={4} textAlign="center">Meet Our Team</Typography>
