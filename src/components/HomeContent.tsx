@@ -34,14 +34,15 @@ export default function HomeContent() {
         alt="Students"
         title="CECE’s Dream"
         bgColor="rgb(3, 104, 57)"
+        textColor="white"
       >
-        <Typography paragraph>
+        <Typography paragraph color="white">
           At CECE’s Dream, we believe that education is the key to breaking the cycle of poverty and unlocking a brighter future. We are a nonprofit organization dedicated to providing tuition assistance to students in developing countries who face financial barriers to accessing quality education.
         </Typography>
-        <Typography paragraph>
+        <Typography paragraph color="white">
           Our mission is to empower underserved youth by supporting their academic journey - offering not just funding, but also hope, encouragement, and a chance to dream beyond their circumstances. Through partnerships with local schools, communities, and donors around the world, CECE Dream helps students stay in school, pursue higher education, and build the foundation for a better life.
         </Typography>
-        <Typography paragraph>
+        <Typography paragraph color="white">
           Every child deserves the opportunity to learn. At CECE Dream, we’re making that dream a reality - one student at a time.
         </Typography>
       </SectionWithImage>

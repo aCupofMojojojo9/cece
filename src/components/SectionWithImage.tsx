@@ -9,9 +9,10 @@ interface SectionWithImageProps {
   title: string;
   children: ReactNode;
   bgColor?: string;
+  textColor?: string;
 }
 
-export default function SectionWithImage({ image, alt, title, children, bgColor }: SectionWithImageProps) {
+export default function SectionWithImage({ image, alt, title, children, bgColor, textColor }: SectionWithImageProps) {
   return (
     <Box sx={{ backgroundColor: bgColor || 'transparent', width: '100%' }}>
       <Box
@@ -61,7 +62,7 @@ export default function SectionWithImage({ image, alt, title, children, bgColor 
             },
           }}
         >
-          <Typography variant="h4" color="primary" fontWeight={700} mb={2}>{title}</Typography>
+          <Typography variant="h1" color={textColor || "primary"} fontWeight={700} mb={2} textAlign="left">{title}</Typography>
           {children}
         </Box>
       </Box>
