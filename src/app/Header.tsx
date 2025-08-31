@@ -24,7 +24,7 @@ const navLinks = [
     { label: "Our story", href: "#our-story" },
     { label: "What we do", href: "#what-we-do" },
     { label: "Get involved", href: "#get-involved" },
-    { label: "Our Team", href: "#our-team" },
+    { label: "Our Team", href: "/our-team" },
     { label: "Contact Us", href: "#contact-us" },
 ];
 

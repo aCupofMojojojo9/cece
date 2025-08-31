@@ -9,6 +9,7 @@ import CardMedia from "@mui/material/CardMedia";
 import SectionWithImage from "./SectionWithImage";
 import StackedImageSection from "./StackedImageSection";
 import DonateSection from "./DonateSection";
+import TeamSection from "./TeamSection";
 
 export default function HomeContent() {
   return (
@@ -86,95 +87,7 @@ export default function HomeContent() {
 
       <DonateSection />
 
-      <Box sx={{ mt: 8 }}>
-        <Typography variant="h4" color="primary" fontWeight={700} mb={4} textAlign="center">Meet Our Team</Typography>
-        <Grid container columns={12} spacing={4} justifyContent="center">
-          <Grid size={{xs: 12, sm: 6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/9acf0da9b0691086f9d57e40f415946e.png"
-                alt="David Ziama"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">David Ziama</Typography>
-              <Typography variant="body2" color="text.secondary">Founder, Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm:6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/2cf5b63e92c299dd3b0a5e489b28a8fc.png"
-                alt="Peter Lazarz"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Peter Lazarz</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm:6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/7757d5cf2c47e8f2c1ce45a98097c075.png"
-                alt="Tera Palozola"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Tera Palozola</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm: 6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/8ac1cfc58787c21c301e969971811503.png"
-                alt="Sandra Bruxvoort"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Sandra Bruxvoort</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm: 6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/0961a7f962bf7493e16a7d5f7f508dfe.jpg"
-                alt="Jared Vanlandingham"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Jared Vanlandingham</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm: 6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/80b0655f53c3845c0bcccd4155e4f35d.png"
-                alt="Ashley Steyer"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Ashley Steyer</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-          <Grid size={{xs: 12, sm:6, md: 2}}>
-            <Box textAlign="center">
-              <CardMedia
-                component="img"
-                image="https://cecesdream.org/_assets/media/838b30c39ace4f7b9b84674e687d543d.png"
-                alt="Michael Taylor"
-                sx={{ width: 120, height: 120, borderRadius: '50%', mx: 'auto', objectFit: 'cover' }}
-              />
-              <Typography variant="h6">Michael Taylor</Typography>
-              <Typography variant="body2" color="text.secondary">Board Member</Typography>
-            </Box>
-          </Grid>
-        </Grid>
-      </Box>
+      <TeamSection />
 
       <Box sx={{ textAlign: 'center', mt: 8, mb: 8 }}>
         <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Contact Us</Typography>
