@@ -47,15 +47,22 @@ export default function HomeContent() {
       </SectionWithImage>
 
       <Box sx={{ width: '100%' }}>
+        <Typography variant="h1" color="primary" fontWeight={700} mb={4} textAlign="center" sx={{ mt: 7 }}>
+          What We Do
+        </Typography>
         <Box
           sx={{
             display: 'flex',
             flexDirection: 'row',
             gap: 4,
+            justifyContent: 'center',
             '@media (max-width:1066px)': {
               flexDirection: 'column',
             },
-            padding: '5%',
+            paddingTop: '2%',
+            paddingLeft: '5%',
+            paddingRight: '5%',
+            paddingBottom: '5%',
           }}
         >
           <StackedImageSection
