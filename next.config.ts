@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
     domains: ["cecesdream.org"],
   },
   output: 'export',
-  basePath: '/cece',
 };
 
 export default nextConfig;
