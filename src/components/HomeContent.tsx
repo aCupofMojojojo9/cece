@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
+import SectionWithImage from "./SectionWithImage";
 
 export default function HomeContent() {
   return (
@@ -27,69 +28,22 @@ export default function HomeContent() {
         }}
       />
 
-      <Box sx={{ backgroundColor: 'rgb(3, 104, 57)', width: '100%' }}>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: {
-              xs: 'column',
-              sm: 'column',
-              md: 'row',
-            },
-            '@media (max-width:1107px)': {
-              flexDirection: 'column',
-            },
-            alignItems: 'stretch',
-            gap: 4,
-            p: '5%',
-            width: '100%',
-            height: { md: 'auto' },
-          }}
-        >
-          <Box
-            sx={{
-              width: { xs: '100%', md: '45%' },
-              flexShrink: 0,
-              display: 'flex',
-              alignItems: 'stretch',
-              '@media (max-width:1107px)': {
-                width: '100%',
-              },
-            }}
-          >
-            <CardMedia
-              component="img"
-              image="https://cecesdream.org/_assets/media/fb13521bc705f8f4f715a1d10161a84a.jpg"
-              alt="Students"
-              sx={{ width: '100%', height: '100%', objectFit: 'cover', minHeight: 220 }}
-            />
-          </Box>
-          <Box
-            sx={{
-              width: { xs: '100%', md: '55%' },
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              '@media (max-width:1107px)': {
-                width: '100%',
-              },
-            }}
-          >
-            <Typography variant="h4" color="primary" fontWeight={700} mb={2}>
-              CECE’s Dream
-            </Typography>
-            <Typography paragraph>
-              At CECE’s Dream, we believe that education is the key to breaking the cycle of poverty and unlocking a brighter future. We are a nonprofit organization dedicated to providing tuition assistance to students in developing countries who face financial barriers to accessing quality education.
-            </Typography>
-            <Typography paragraph>
-              Our mission is to empower underserved youth by supporting their academic journey - offering not just funding, but also hope, encouragement, and a chance to dream beyond their circumstances. Through partnerships with local schools, communities, and donors around the world, CECE Dream helps students stay in school, pursue higher education, and build the foundation for a better life.
-            </Typography>
-            <Typography paragraph>
-              Every child deserves the opportunity to learn. At CECE Dream, we’re making that dream a reality - one student at a time.
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
+      <SectionWithImage
+        image="https://cecesdream.org/_assets/media/fb13521bc705f8f4f715a1d10161a84a.jpg"
+        alt="Students"
+        title="CECE’s Dream"
+        bgColor="rgb(3, 104, 57)"
+      >
+        <Typography paragraph>
+          At CECE’s Dream, we believe that education is the key to breaking the cycle of poverty and unlocking a brighter future. We are a nonprofit organization dedicated to providing tuition assistance to students in developing countries who face financial barriers to accessing quality education.
+        </Typography>
+        <Typography paragraph>
+          Our mission is to empower underserved youth by supporting their academic journey - offering not just funding, but also hope, encouragement, and a chance to dream beyond their circumstances. Through partnerships with local schools, communities, and donors around the world, CECE Dream helps students stay in school, pursue higher education, and build the foundation for a better life.
+        </Typography>
+        <Typography paragraph>
+          Every child deserves the opportunity to learn. At CECE Dream, we’re making that dream a reality - one student at a time.
+        </Typography>
+      </SectionWithImage>
 
       <Box sx={{ width: '100%' }}>
         <Box sx={{display: 'flex'}}>
