@@ -3,13 +3,10 @@
 import Container from "@mui/material/Container";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 import SectionWithImage from "./SectionWithImage";
 import StackedImageSection from "./StackedImageSection";
 import DonateSection from "./DonateSection";
-import TeamSection from "./TeamSection";
 
 export default function HomeContent() {
   return (
@@ -86,8 +83,6 @@ export default function HomeContent() {
       </Box>
 
       <DonateSection />
-
-      <TeamSection />
 
       <Box sx={{ textAlign: 'center', mt: 8, mb: 8 }}>
         <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Contact Us</Typography>
