@@ -11,6 +11,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import CardMedia from '@mui/material/CardMedia';
 
 export default function ContactUsPage() {
   return (
@@ -40,9 +41,18 @@ export default function ContactUsPage() {
       </Box>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 6 }}>
         <Box sx={{ flex: 1, height: 2, background: '#eee' }} />
-        <Typography sx={{ mx: 2, color: 'primary.main', fontWeight: 700 }}>
-          &#9829;
-        </Typography>
+        <CardMedia
+          component="img"
+          image="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png"
+          alt="divider"
+          sx={{
+            width: 60,
+            height: 40,
+            objectFit: "cover",
+            mx: 2,
+            borderRadius: 2,
+          }}
+        />
         <Box sx={{ flex: 1, height: 2, background: '#eee' }} />
       </Box>
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mt: 4 }}>

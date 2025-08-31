@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import Drawer from "@mui/material/Drawer";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -37,9 +38,9 @@ export default function Header() {
   useEffect(() => {
     const handleScroll = () => {
       if (isMobile) {
-        if (window.scrollY > 260 && !shrunk) {
+        if (window.scrollY > 200 && !shrunk) {
           setShrunk(true);
-        } else if (window.scrollY <= 260 && shrunk) {
+        } else if (window.scrollY <= 200 && shrunk) {
           setShrunk(false);
         }
       } else {
@@ -54,7 +55,7 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isMobile, shrunk]);
 
-  const toolbarHeight = shrunk ? 92 : (isMobile ? 300 : 160);
+  const toolbarHeight = shrunk ? 92 : (isMobile ? 200 : 160);
 
   return (
     <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0}}>
@@ -68,12 +69,17 @@ export default function Header() {
           />
         </Box>
           {isMobile ? (
-            <Box sx={{ display: "flex", alignItems: "right", justifyContent: "flex-end", width: "100%"  }}>
+            <Box sx={{ display: "flex", alignItems: "right", justifyContent: "flex-end", width: "100%", marginRight: 2 }}>
               <IconButton color="inherit" edge="start" onClick={() => setDrawerOpen(true)} sx={{ ml: 2 }}>
                 <MenuIcon />
               </IconButton>
               <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
-                <List>
+                <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
+                  <IconButton onClick={() => setDrawerOpen(false)}>
+                    <CloseIcon />
+                  </IconButton>
+                </Box>
+                <List sx={{ minWidth: 250 }}>
                   {navLinks.map((link) => (
                     <ListItem key={link.label} disablePadding>
                       <ListItemButton component={Link} href={link.href} onClick={() => setDrawerOpen(false)}>
