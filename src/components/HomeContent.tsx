@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 import SectionWithImage from "./SectionWithImage";
+import StackedImageSection from "./StackedImageSection";
 
 export default function HomeContent() {
   return (
@@ -46,76 +47,31 @@ export default function HomeContent() {
       </SectionWithImage>
 
       <Box sx={{ width: '100%' }}>
-        <Box sx={{display: 'flex'}}>
         <Box
           sx={{
             display: 'flex',
-            alignItems: 'stretch',
+            flexDirection: 'row',
             gap: 4,
-            p: '5%',
-            width: '100%',
-            height: { md: 'auto' },
-          }}
-        >
-          <Box
-            sx={{
-              width: '100%',
-              flexShrink: 0,
-            }}
-          >
-            <CardMedia
-              component="img"
-              image="https://cecesdream.org/_assets/media/899a07da178291c4f369ba924fc7a90e.jpg"
-              alt="Students"
-              sx={{ width: '100%', height: '50%', objectFit: 'cover', minHeight: 220 }}
-            />
-            <Box
-            sx={{
-              width: '100%',
-              display: 'flex',
+            '@media (max-width:1066px)': {
               flexDirection: 'column',
-              justifyContent: 'center',
-            }}
-            >
-              <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Financial Aid</Typography>
-              <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
-            </Box>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'stretch',
-            gap: 4,
-            p: '5%',
-            width: '100%',
-            height: { md: 'auto' },
+            },
+            padding: '5%',
           }}
         >
-          <Box
-            sx={{
-              width:'100%',
-              flexShrink: 0,
-            }}
+          <StackedImageSection
+            image="https://cecesdream.org/_assets/media/899a07da178291c4f369ba924fc7a90e.jpg"
+            alt="Students"
+            title="Financial Aid"
           >
-            <CardMedia
-              component="img"
-              image="https://cecesdream.org/_assets/media/c96566f56b1df185c78e67d21b59eca3.jpg"
-              alt="Students"
-              sx={{ width: '100%', height: '50%', objectFit: 'cover', minHeight: 220 }}
-            />
-            <Box
-              sx={{
-                width: '100%',
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
-              <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Educational Resources</Typography>
-              <Typography paragraph>Whether a student or aspiring business owner, those in need are given the tools and resources to pursue their dreams without the barrier to accessibility.</Typography>
-            </Box>
-          </Box>
-        </Box>
+            <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
+          </StackedImageSection>
+          <StackedImageSection
+            image="https://cecesdream.org/_assets/media/c96566f56b1df185c78e67d21b59eca3.jpg"
+            alt="Students"
+            title="Educational Resources"
+          >
+            <Typography paragraph>Whether a student or aspiring business owner, those in need are given the tools and resources to pursue their dreams without the barrier to accessibility.</Typography>
+          </StackedImageSection>
         </Box>
       </Box>
 
