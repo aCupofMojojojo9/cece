@@ -57,14 +57,14 @@ export default function Header() {
   const toolbarHeight = shrunk ? 92 : (isMobile ? 300 : 160);
 
   return (
-    <AppBar position="sticky" color="primary" elevation={0}>
+    <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0}}>
       <Toolbar sx={{ minHeight: toolbarHeight, px: 0, display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }}>
+        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }} onClick={() => window.location.href = "/"}>
           <CardMedia
             component="img"
             image="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png"
             alt="CECE's Dream Logo"
-            sx={{ height: toolbarHeight, width: "auto", objectFit: "contain" }}
+            sx={{ height: toolbarHeight, width: "auto", objectFit: "contain", cursor: "pointer" }}
           />
         </Box>
           {isMobile ? (
