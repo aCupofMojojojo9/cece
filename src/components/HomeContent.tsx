@@ -91,35 +91,79 @@ export default function HomeContent() {
         </Box>
       </Box>
 
-      <Grid container columns={12} spacing={6} sx={{ mt: 6 }}>
-        <Grid size={{xs: 12, md: 6}}>
-          <CardMedia
-            component="img"
-            image="https://cecesdream.org/_assets/media/fb13521bc705f8f4f715a1d10161a84a.jpg"
-            alt="Financial Aid"
-            sx={{ width: "100%", height: 300, objectFit: "cover" }}
-          />
-        </Grid>
-        <Grid size={{xs: 12, md: 6}}>
-          <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Financial Aid</Typography>
-          <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
-        </Grid>
-      </Grid>
-
-      <Grid container columns={12} spacing={6} sx={{ mt: 6 }}>
-        <Grid size={{xs: 12, md: 6}}>
-          <CardMedia
-            component="img"
-            image="https://cecesdream.org/_assets/media/45d18337459d82268e03e18a466bd892.jpg"
-            alt="Educational Resources"
-            sx={{ width: "100%", height: 300, objectFit: "cover" }}
-          />
-        </Grid>
-        <Grid size={{xs: 12, md: 6}}>
-          <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Educational Resources</Typography>
-          <Typography paragraph>Whether a student or aspiring business owner, those in need are given the tools and resources to pursue their dreams without the barrier to accessibility.</Typography>
-        </Grid>
-      </Grid>
+      <Box sx={{ width: '100%' }}>
+        <Box sx={{display: 'flex'}}>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'stretch',
+            gap: 4,
+            p: '5%',
+            width: '100%',
+            height: { md: 'auto' },
+          }}
+        >
+          <Box
+            sx={{
+              width: '100%',
+              flexShrink: 0,
+            }}
+          >
+            <CardMedia
+              component="img"
+              image="https://cecesdream.org/_assets/media/899a07da178291c4f369ba924fc7a90e.jpg"
+              alt="Students"
+              sx={{ width: '100%', height: '50%', objectFit: 'cover', minHeight: 220 }}
+            />
+            <Box
+            sx={{
+              width: '100%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center',
+            }}
+            >
+              <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Financial Aid</Typography>
+              <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
+            </Box>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: 'flex',
+            alignItems: 'stretch',
+            gap: 4,
+            p: '5%',
+            width: '100%',
+            height: { md: 'auto' },
+          }}
+        >
+          <Box
+            sx={{
+              width:'100%',
+              flexShrink: 0,
+            }}
+          >
+            <CardMedia
+              component="img"
+              image="https://cecesdream.org/_assets/media/c96566f56b1df185c78e67d21b59eca3.jpg"
+              alt="Students"
+              sx={{ width: '100%', height: '50%', objectFit: 'cover', minHeight: 220 }}
+            />
+            <Box
+              sx={{
+                width: '100%',
+                display: 'flex',
+                justifyContent: 'center',
+              }}
+            >
+              <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Educational Resources</Typography>
+              <Typography paragraph>Whether a student or aspiring business owner, those in need are given the tools and resources to pursue their dreams without the barrier to accessibility.</Typography>
+            </Box>
+          </Box>
+        </Box>
+        </Box>
+      </Box>
 
       <Box sx={{ textAlign: 'center', mt: 8, mb: 8 }}>
         <Typography variant="h4" color="primary" fontWeight={700} mb={2}>Support Our Mission</Typography>
