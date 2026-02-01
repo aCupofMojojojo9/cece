@@ -75,6 +75,7 @@ export default function TeamSection() {
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
+          objectPosition: "center 20%",
           objectFit: "cover"}}
         />
       </Box>

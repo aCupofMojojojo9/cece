@@ -17,7 +17,8 @@ export default function StackedImageSection({ image, alt, title, children }: Sta
         component="img"
         image={image}
         alt={alt}
-        sx={{ width: '80%', height: '50%', objectFit: 'cover', minHeight: 220 }}
+        sx={{ width: '80%', height: '50%', objectFit: 'cover', minHeight: 220,
+          objectPosition: "center 20%" }}
       />
       <Box
         sx={{
