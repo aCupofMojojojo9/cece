@@ -3,7 +3,6 @@
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
@@ -35,10 +34,14 @@ export default function Footer() {
             Follow Us
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
-            <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#1877F3', '&:hover': { background: '#1877F3' }, '&:active': { background: '#1877F3' } }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ display: 'none', background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ display: 'none', background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: '#1877F3', borderRadius: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center', '&:hover': { background: '#1877F3', opacity: 0.9 } }}>
+              <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.67 56V30.5h8.55l1.28-9.93h-9.83v-6.35c0-2.87.8-4.83 4.92-4.83h5.26V.37A70.5 70.5 0 0 0 35.2 0c-7.58 0-12.77 4.63-12.77 13.13v7.33h-8.58V30.5h8.58V56h9.24z" fill="#fff"/>
+              </svg>
+            </IconButton>
+            <IconButton sx={{ display: 'none', width: 56, height: 56, background: '#0A66C2', borderRadius: 1.5, '&:hover': { background: '#0A66C2', opacity: 0.9 } }}><LinkedInIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
+            <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', borderRadius: 1.5, '&:hover': { opacity: 0.9 } }}><InstagramIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
+            <IconButton sx={{ display: 'none', width: 56, height: 56, background: '#FF0000', borderRadius: 1.5, '&:hover': { background: '#FF0000', opacity: 0.9 } }}><YouTubeIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
           </Box>
           <Typography variant="body2" color="white">
             Join us on social media and follow our journey as we empower communities and transform lives through education.

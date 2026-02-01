@@ -124,21 +124,28 @@ export default function TeamSection() {
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
+                  <Typography
+                    variant="h5"
+                    fontWeight={700}
+                    textTransform="uppercase"
+                    mb={1}
+                  >
+                    {member.name}
+                  </Typography>
                   <Box
                     sx={{
                       display: "flex",
                       alignItems: "center",
                       justifyContent: { xs: "center", md: "flex-start" },
-                      gap: 1,
-                      mb: 1,
+                      gap: 1.5,
+                      mb: 2,
                     }}
                   >
                     <Typography
-                      variant="h5"
-                      fontWeight={700}
-                      textTransform="uppercase"
+                      variant="subtitle1"
+                      color="text.secondary"
                     >
-                      {member.name}
+                      {member.role}
                     </Typography>
                     {member.linkedInUrl && (
                       <IconButton
@@ -146,20 +153,24 @@ export default function TeamSection() {
                         href={member.linkedInUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        size="small"
                         aria-label="LinkedIn"
+                        sx={{ 
+                          width: 32, 
+                          height: 32, 
+                          background: '#0A66C2', 
+                          borderRadius: 1.2,
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          '&:hover': { background: '#0077B5', transform: 'scale(1.05)', transition: 'all 0.2s' } 
+                        }}
                       >
-                        <LinkedInIcon fontSize="medium" sx={{ color: "#0A66C2" }} />
+                        <svg width="20" height="20" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.268 28H3.156V11.16h5.112V28zM5.71 8.928c-1.636 0-2.964-1.348-2.964-3.008 0-1.66 1.328-3.008 2.964-3.008 1.636 0 2.964 1.348 2.964 3.008 0 1.66-1.328 3.008-2.964 3.008zM29.252 28h-5.1v-8.196c0-1.956-.036-4.472-2.724-4.472-2.728 0-3.148 2.128-3.148 4.328V28h-5.112V11.16h4.908v2.244h.072c.684-1.296 2.352-2.664 4.84-2.664 5.18 0 6.132 3.408 6.132 7.836V28h.132z" fill="#fff"/>
+                        </svg>
                       </IconButton>
                     )}
                   </Box>
-                  <Typography
-                    variant="subtitle1"
-                    color="text.secondary"
-                    mb={2}
-                  >
-                    {member.role}
-                  </Typography>
                   <Typography variant="body1" mb={2}>
                     {member.bio}
                   </Typography>
@@ -168,39 +179,12 @@ export default function TeamSection() {
               {idx < teamMembers.length - 1 && (
                 <Box
                   sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
                     width: "100%",
-                    py: 4,
+                    height: 2,
+                    background: "#eee",
+                    my: 4,
                   }}
-                >
-                  <Box
-                    sx={{
-                      flex: 1,
-                      height: 2,
-                      background: "#eee",
-                    }}
-                  />
-                  <CardMedia
-                    component="img"
-                    image="/cece/photos/cece-logo.png"
-                    alt="divider"
-                    sx={{
-                      width: 100,
-                      height: "auto",
-                      objectFit: "contain",
-                      mx: 3,
-                    }}
-                  />
-                  <Box
-                    sx={{
-                      flex: 1,
-                      height: 2,
-                      background: "#eee",
-                    }}
-                  />
-                </Box>
+                />
               )}
             </>
           ))}
