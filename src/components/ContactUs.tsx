@@ -43,14 +43,14 @@ export default function ContactUs() {
         <Box sx={{ flex: 1, height: 2, background: '#eee' }} />
         <CardMedia
           component="img"
-          image="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png"
+          image="/cece/photos/cece-logo.png"
           alt="divider"
           sx={{
-            width: 60,
+            width: 80,
             height: 40,
             objectFit: "cover",
-            mx: 2,
-            borderRadius: 2,
+            mx: 1,
+            borderRadius: 1,
           }}
         />
         <Box sx={{ flex: 1, height: 2, background: '#eee' }} />
@@ -67,7 +67,7 @@ export default function ContactUs() {
           <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
             <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#1877F3', '&:hover': { background: '#1877F3' }, '&:active': { background: '#1877F3' } }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton size="large" sx={{ background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton size="large" sx={{ background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
           </Box>
         </Box>

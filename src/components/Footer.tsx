@@ -37,7 +37,7 @@ export default function Footer() {
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
             <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#1877F3', '&:hover': { background: '#1877F3' }, '&:active': { background: '#1877F3' } }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton size="large" sx={{ background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton size="large" sx={{ background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
           </Box>
           <Typography variant="body2" color="white">

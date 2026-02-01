@@ -56,15 +56,15 @@ export default function Header() {
       const scrollY = window.scrollY;
       
       if (isMobile) {
-        if (scrollY > 220 && !shrunk) {
+        if (scrollY > 300 && !shrunk) {
           setShrunk(true);
-        } else if (scrollY < 180 && shrunk) {
+        } else if (scrollY < 100 && shrunk) {
           setShrunk(false);
         }
       } else {
-        if (scrollY > 160 && !shrunk) {
+        if (scrollY > 220 && !shrunk) {
           setShrunk(true);
-        } else if (scrollY < 120 && shrunk) {
+        } else if (scrollY < 50 && shrunk) {
           setShrunk(false);
         }
       }

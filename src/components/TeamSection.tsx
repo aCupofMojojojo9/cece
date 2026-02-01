@@ -2,10 +2,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { ReactElement } from "react";
 
 const teamMembers = [
 	{
@@ -13,64 +10,60 @@ const teamMembers = [
 		role: "Founder, Board Member",
 		image: "/cece/photos/david-ziama.png",
 		bio: "David is passionate about education and community empowerment. He has worked in various nonprofit roles and is dedicated to helping underserved youth.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/david-ziama-331274b6/",
 	},
 	{
 		name: "Peter Lazarz",
 		role: "Board Member",
 		image: "/cece/photos/peter-lazarz.png",
 		bio: "Peter brings over 20 years of experience in the tech industry, focusing on software development and project management.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/peter-lazarz-52997657/",
 	},
 	{
 		name: "Tera Palozola",
 		role: "Board Member",
 		image: "/cece/photos/tera-palozola.png",
 		bio: "Tera is a dedicated advocate for mental health awareness and has been instrumental in various community outreach programs.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/terapalozola/",
 	},
 	{
 		name: "Sandra Bruxvoort",
 		role: "Board Member",
 		image: "/cece/photos/sandra-bruxvoort.png",
 		bio: "Sandra has a background in finance and administration, with a passion for helping nonprofits achieve their financial goals.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "",
 	},
 	{
 		name: "Jared Vanlandingham",
 		role: "Board Member",
 		image: "/cece/photos/jared-vanlandingham.jpg",
 		bio: "Jared is a community leader with a focus on youth mentorship and development programs.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/jared-vanlandingham-830a9455/",
 	},
 	{
 		name: "Ashley Steyer",
 		role: "Board Member",
 		image: "/cece/photos/ashley-steyer.png",
 		bio: "Ashley is passionate about education and has been involved in various teaching and curriculum development initiatives.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/ashleynsteyer/",
 	},
 	{
 		name: "Michael Taylor",
 		role: "Board Member",
 		image: "/cece/photos/michael-taylor.png",
 		bio: "Michael has a diverse background in business and technology, with a strong commitment to community service.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "https://www.linkedin.com/in/michaelraytaylor/",
 	},
 	{
 		name: "Jenny Waddle",
 		role: "Board Member",
 		image: "/cece/photos/jenny-waddle.png",
 		bio: "Jenny has a diverse background in business and technology, with a strong commitment to community service.",
-		social: ["instagram", "facebook", "linkedin"],
+		linkedInUrl: "",
 	},
 ];
 
-const socialIcons: Record<string, ReactElement> = {
-	instagram: <InstagramIcon fontSize="medium" sx={{ color: "#E1306C" }} />,
-	facebook: <FacebookIcon fontSize="medium" sx={{ color: "#1877F3" }} />,
-	linkedin: <LinkedInIcon fontSize="medium" sx={{ color: "#0A66C2" }} />,
-};
+
 
 export default function TeamSection() {
 	return (
@@ -131,14 +124,35 @@ export default function TeamSection() {
                     textAlign: { xs: "center", md: "left" },
                   }}
                 >
-                  <Typography
-                    variant="h5"
-                    fontWeight={700}
-                    mb={1}
-                    textTransform="uppercase"
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: { xs: "center", md: "flex-start" },
+                      gap: 1,
+                      mb: 1,
+                    }}
                   >
-                    {member.name}
-                  </Typography>
+                    <Typography
+                      variant="h5"
+                      fontWeight={700}
+                      textTransform="uppercase"
+                    >
+                      {member.name}
+                    </Typography>
+                    {member.linkedInUrl && (
+                      <IconButton
+                        component="a"
+                        href={member.linkedInUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        size="small"
+                        aria-label="LinkedIn"
+                      >
+                        <LinkedInIcon fontSize="medium" sx={{ color: "#0A66C2" }} />
+                      </IconButton>
+                    )}
+                  </Box>
                   <Typography
                     variant="subtitle1"
                     color="text.secondary"
@@ -149,23 +163,6 @@ export default function TeamSection() {
                   <Typography variant="body1" mb={2}>
                     {member.bio}
                   </Typography>
-                  <Box
-                    sx={{
-                      mt: 1,
-                      display: "flex",
-                      gap: 1,
-                    }}
-                  >
-                    {member.social.map((type) => (
-                      <IconButton
-                        key={type}
-                        size="small"
-                        aria-label={type}
-                      >
-                        {socialIcons[type]}
-                      </IconButton>
-                    ))}
-                  </Box>
                 </Box>
               </Box>
               {idx < teamMembers.length - 1 && (
@@ -190,11 +187,11 @@ export default function TeamSection() {
                     image="/cece/photos/cece-logo.png"
                     alt="divider"
                     sx={{
-                      width: 60,
+                      width: 80,
                       height: 40,
                       objectFit: "cover",
-                      mx: 2,
-                      borderRadius: 2,
+                      mx: 1,
+                      borderRadius: 1,
                     }}
                   />
                   <Box
