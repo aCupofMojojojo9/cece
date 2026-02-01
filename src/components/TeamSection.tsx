@@ -11,56 +11,56 @@ const teamMembers = [
 	{
 		name: "David Ziama",
 		role: "Founder, Board Member",
-		image: "/cece/david-ziama.png",
+		image: "/cece/photos/david-ziama.png",
 		bio: "David is passionate about education and community empowerment. He has worked in various nonprofit roles and is dedicated to helping underserved youth.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Peter Lazarz",
 		role: "Board Member",
-		image: "/cece/peter-lazarz.png",
+		image: "/cece/photos/peter-lazarz.png",
 		bio: "Peter brings over 20 years of experience in the tech industry, focusing on software development and project management.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Tera Palozola",
 		role: "Board Member",
-		image: "/cece/tera-palozola.png",
+		image: "/cece/photos/tera-palozola.png",
 		bio: "Tera is a dedicated advocate for mental health awareness and has been instrumental in various community outreach programs.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Sandra Bruxvoort",
 		role: "Board Member",
-		image: "/cece/sandra-bruxvoort.png",
+		image: "/cece/photos/sandra-bruxvoort.png",
 		bio: "Sandra has a background in finance and administration, with a passion for helping nonprofits achieve their financial goals.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Jared Vanlandingham",
 		role: "Board Member",
-		image: "/cece/jared-vanlandingham.jpg",
+		image: "/cece/photos/jared-vanlandingham.jpg",
 		bio: "Jared is a community leader with a focus on youth mentorship and development programs.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Ashley Steyer",
 		role: "Board Member",
-		image: "/cece/ashley-steyer.png",
+		image: "/cece/photos/ashley-steyer.png",
 		bio: "Ashley is passionate about education and has been involved in various teaching and curriculum development initiatives.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Michael Taylor",
 		role: "Board Member",
-		image: "/cece/michael-taylor.png",
+		image: "/cece/photos/michael-taylor.png",
 		bio: "Michael has a diverse background in business and technology, with a strong commitment to community service.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Jenny Waddle",
 		role: "Board Member",
-		image: "/cece/jenny-waddle.png",
+		image: "/cece/photos/jenny-waddle.png",
 		bio: "Jenny has a diverse background in business and technology, with a strong commitment to community service.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
@@ -78,7 +78,7 @@ export default function TeamSection() {
       <Box>
         <CardMedia
           component="img"
-          image="/cece/kids-in-classroom.jpg"
+          image="/cece/photos/kids-in-classroom.jpg"
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
@@ -187,7 +187,7 @@ export default function TeamSection() {
                   />
                   <CardMedia
                     component="img"
-                    image="/cece/cece-logo.png"
+                    image="/cece/photos/cece-logo.png"
                     alt="divider"
                     sx={{
                       width: 60,

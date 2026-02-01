@@ -83,7 +83,7 @@ export default function Header() {
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
-            image="/cece/cece-logo.png"
+            image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
             sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 120 : 280), objectFit: "contain", mb: !shrunk && !isMobile ? 0.5 : 0 }}
           />

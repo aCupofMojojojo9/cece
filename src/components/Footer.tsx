@@ -49,7 +49,7 @@ export default function Footer() {
         <Box sx={{ width: { xs: '100%', md: '33%' }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'flex-start', mt: { md: -2 } }}>
           <CardMedia
             component="img"
-            image="/cece/cece-logo.png"
+            image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
             sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 1.5 }}
           />
