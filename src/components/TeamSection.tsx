@@ -11,56 +11,56 @@ const teamMembers = [
 	{
 		name: "David Ziama",
 		role: "Founder, Board Member",
-		image: "https://cecesdream.org/_assets/media/9acf0da9b0691086f9d57e40f415946e.png",
+		image: "/cece/david-ziama.png",
 		bio: "David is passionate about education and community empowerment. He has worked in various nonprofit roles and is dedicated to helping underserved youth.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Peter Lazarz",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/2cf5b63e92c299dd3b0a5e489b28a8fc.png",
+		image: "/cece/peter-lazarz.png",
 		bio: "Peter brings over 20 years of experience in the tech industry, focusing on software development and project management.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Tera Palozola",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/7757d5cf2c47e8f2c1ce45a98097c075.png",
+		image: "/cece/tera-palozola.png",
 		bio: "Tera is a dedicated advocate for mental health awareness and has been instrumental in various community outreach programs.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Sandra Bruxvoort",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/8ac1cfc58787c21c301e969971811503.png",
+		image: "/cece/sandra-bruxvoort.png",
 		bio: "Sandra has a background in finance and administration, with a passion for helping nonprofits achieve their financial goals.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Jared Vanlandingham",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/0961a7f962bf7493e16a7d5f7f508dfe.jpg",
+		image: "/cece/jared-vanlandingham.jpg",
 		bio: "Jared is a community leader with a focus on youth mentorship and development programs.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Ashley Steyer",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/80b0655f53c3845c0bcccd4155e4f35d.png",
+		image: "/cece/ashley-steyer.png",
 		bio: "Ashley is passionate about education and has been involved in various teaching and curriculum development initiatives.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Michael Taylor",
 		role: "Board Member",
-		image: "https://cecesdream.org/_assets/media/838b30c39ace4f7b9b84674e687d543d.png",
+		image: "/cece/michael-taylor.png",
 		bio: "Michael has a diverse background in business and technology, with a strong commitment to community service.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
 	{
 		name: "Jenny Waddle",
 		role: "Board Member",
-		image: "",
+		image: "/cece/jenny-waddle.png",
 		bio: "Jenny has a diverse background in business and technology, with a strong commitment to community service.",
 		social: ["instagram", "facebook", "linkedin"],
 	},
@@ -78,7 +78,7 @@ export default function TeamSection() {
       <Box>
         <CardMedia
           component="img"
-          image="https://cecesdream.org/_assets/media/68d5836d0cf8c4943ec17ad96ddc2547.jpg"
+          image="/cece/kids-in-classroom.jpg"
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
@@ -187,7 +187,7 @@ export default function TeamSection() {
                   />
                   <CardMedia
                     component="img"
-                    image="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png"
+                    image="/cece/cece-logo.png"
                     alt="divider"
                     sx={{
                       width: 60,

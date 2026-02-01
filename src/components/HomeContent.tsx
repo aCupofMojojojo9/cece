@@ -18,7 +18,7 @@ export default function HomeContent() {
 
         <CardMedia
           component="img"
-          image="https://cecesdream.org/_assets/media/14378b6fe8412e01c9a561382e310811.jpg"
+          image="/cece/kids-running.jpg"
           alt="Students"
           sx={{
             width: "100%",

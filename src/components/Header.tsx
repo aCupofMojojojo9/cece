@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -13,8 +14,7 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
+import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import CardMedia from "@mui/material/CardMedia";
 import HomeIcon from "@mui/icons-material/Home";
@@ -30,10 +30,26 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [shrunk, setShrunk] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,20 +73,52 @@ export default function Header() {
 
   const toolbarHeight = shrunk ? 92 : (isMobile ? 200 : 160);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0}}>
-      <Toolbar sx={{ minHeight: toolbarHeight, px: 0, display: "flex", justifyContent: "center", alignItems: "center" }}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: 2 }} onClick={() => window.location.href = "/"}>
+      <Toolbar sx={{ minHeight: toolbarHeight, px: 2, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
-            image="https://cecesdream.org/_assets/media/fbb0a7197462a4c6fb74e78bd98f7ee0.png"
+            image="/cece/cece-logo.png"
             alt="CECE's Dream Logo"
-            sx={{ height: toolbarHeight, width: "auto", objectFit: "contain", cursor: "pointer" }}
+            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 120 : 280), objectFit: "contain", mb: !shrunk && !isMobile ? 0.5 : 0 }}
           />
+          {!shrunk && !isMobile && (
+            <Box>
+              <Typography 
+                sx={{ 
+                  fontWeight: 700, 
+                  letterSpacing: 1, 
+                  fontSize: '0.7rem', 
+                  lineHeight: 1.4,
+                  color: '#222',
+                  display: 'block',
+                  textTransform: 'uppercase'
+                }}
+              >
+                Community Empowerment + Childhood Education
+              </Typography>
+              <Typography 
+                sx={{ 
+                  fontStyle: "italic", 
+                  fontSize: '0.85rem', 
+                  color: '#222',
+                  display: 'block',
+                  mt: 0.25
+                }}
+              >
+                A nonprofit organization
+              </Typography>
+            </Box>
+          )}
         </Box>
           {isMobile ? (
-            <Box sx={{ display: "flex", alignItems: "right", justifyContent: "flex-end", width: "100%", marginRight: 2 }}>
-              <IconButton color="inherit" edge="start" onClick={() => setDrawerOpen(true)} sx={{ ml: 2 }}>
+            <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
+              <IconButton color="inherit" edge="end" onClick={() => setDrawerOpen(true)}>
                 <MenuIcon />
               </IconButton>
               <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
@@ -91,7 +139,7 @@ export default function Header() {
               </Drawer>
             </Box>
           ) : (
-            <Box sx={{ display: "flex", gap: 1, justifyContent: "flex-end", width: "100%" }}>
+            <Box sx={{ display: "flex", gap: 1 }}>
               {navLinks.map((link) => (
                 link.label === "Home"
                   ? <IconButton key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5 }}><HomeIcon /></IconButton>
