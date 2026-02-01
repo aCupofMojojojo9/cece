@@ -53,22 +53,40 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
+      const scrollY = window.scrollY;
+      
       if (isMobile) {
-        if (window.scrollY > 200 && !shrunk) {
+        if (scrollY > 220 && !shrunk) {
           setShrunk(true);
-        } else if (window.scrollY <= 200 && shrunk) {
+        } else if (scrollY < 180 && shrunk) {
           setShrunk(false);
         }
       } else {
-        if (window.scrollY > 140 && !shrunk) {
+        if (scrollY > 160 && !shrunk) {
           setShrunk(true);
-        } else if (window.scrollY <= 140 && shrunk) {
+        } else if (scrollY < 120 && shrunk) {
           setShrunk(false);
         }
       }
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    
+    let rafId: number | null = null;
+    const throttledScroll = () => {
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          handleScroll();
+          rafId = null;
+        });
+      }
+    };
+    
+    window.addEventListener("scroll", throttledScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", throttledScroll);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
+    };
   }, [isMobile, shrunk]);
 
   const toolbarHeight = shrunk ? 92 : (isMobile ? 200 : 160);
@@ -78,14 +96,14 @@ export default function Header() {
   }
 
   return (
-    <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0}}>
-      <Toolbar sx={{ minHeight: toolbarHeight, px: 2, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0, transition: 'all 0.3s ease-in-out' }}>
+      <Toolbar sx={{ minHeight: toolbarHeight, px: 2, display: "flex", justifyContent: "space-between", alignItems: "center", transition: 'min-height 0.3s ease-in-out' }}>
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
             image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 120 : 280), objectFit: "contain", mb: !shrunk && !isMobile ? 0.5 : 0 }}
+            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 120 : 280), objectFit: "contain", mb: !shrunk && !isMobile ? 0.5 : 0, transition: 'width 0.3s ease-in-out' }}
           />
           {!shrunk && !isMobile && (
             <Box>
