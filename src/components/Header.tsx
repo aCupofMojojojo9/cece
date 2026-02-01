@@ -103,15 +103,15 @@ export default function Header() {
             component="img"
             image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 120 : 280), objectFit: "contain", mb: !shrunk && !isMobile ? 0.5 : 0, transition: 'width 0.3s ease-in-out' }}
+            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 180 : 280), objectFit: "contain", mb: !shrunk ? 0.5 : 0, transition: 'width 0.3s ease-in-out' }}
           />
-          {!shrunk && !isMobile && (
+          {!shrunk && (
             <Box>
               <Typography 
                 sx={{ 
                   fontWeight: 700, 
                   letterSpacing: 1, 
-                  fontSize: '0.7rem', 
+                  fontSize: { xs: '0.5rem', md: '0.7rem' }, 
                   lineHeight: 1.4,
                   color: '#222',
                   display: 'block',
@@ -123,7 +123,7 @@ export default function Header() {
               <Typography 
                 sx={{ 
                   fontStyle: "italic", 
-                  fontSize: '0.85rem', 
+                  fontSize: { xs: '0.65rem', md: '0.85rem' }, 
                   color: '#222',
                   display: 'block',
                   mt: 0.25
