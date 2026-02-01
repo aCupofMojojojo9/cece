@@ -24,34 +24,34 @@ export default function Footer() {
           gap: 4,
           px: '10%',
           display: 'flex',
-          alignItems: 'flex-start',
-          justifyContent: 'space-between'
+          alignItems: 'stretch',
+          justifyContent: 'space-evenly'
         }}
       >
         {/* Social Section */}
-        <Box sx={{ width: { xs: '100%', md: '33%' },
-            flexShrink: 0, textAlign: 'center' }}>
+        <Box sx={{ width: { xs: '100%', md: '33.33%' },
+            flex: '1 1 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', py: 2 }}>
           <Typography variant="h3" fontWeight={700} mb={2} color="white">
-            Get Social With Us
+            Follow Us
           </Typography>
           <Box sx={{ display: 'flex', justifyContent: 'center', gap: 2, mb: 2 }}>
             <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#1877F3', '&:hover': { background: '#1877F3' }, '&:active': { background: '#1877F3' } }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ display: 'none', background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ display: 'none', background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
           </Box>
           <Typography variant="body2" color="white">
-            Come be a part of this amazing effort being led by CECE Dream. You will be happy that you did!
+            Join us on social media and follow our journey as we empower communities and transform lives through education.
           </Typography>
         </Box>
 
         {/* Logo and Tagline Section */}
-        <Box sx={{ width: { xs: '100%', md: '33%' }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', alignSelf: 'flex-start' }}>
+        <Box sx={{ width: { xs: '100%', md: '33.33%' }, flex: '1 1 0', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', py: 4, px: 2 }}>
           <CardMedia
             component="img"
             image="/cece/photos/cece-logo-white-text.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 3 }}
+            sx={{ height: "auto", width: { xs: 160, sm: 200, md: 200 }, objectFit: "contain", mb: 2 }}
           />
           <Typography 
             sx={{ 
@@ -78,8 +78,8 @@ export default function Footer() {
         </Box>
 
         {/* Contact Section */}
-        <Box sx={{ width: { xs: '100%', md: '33%' },
-            flexShrink: 0, textAlign: 'center', justifyContent: 'center'}}>
+        <Box sx={{ width: { xs: '100%', md: '33.33%' },
+            flex: '1 1 0', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', py: 2 }}>
           <Typography variant="h3" fontWeight={700} mb={2} color="white">
             Contact CECE Dream
           </Typography>
@@ -87,11 +87,11 @@ export default function Footer() {
             <LocationOnIcon sx={{ mr: 1, color: 'white' }} />
             <Typography variant="body2" color="white">Kansas City, MO, USA</Typography>
           </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', mb: 1, justifyContent: 'center' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', mb: 2, justifyContent: 'center' }}>
             <EmailIcon sx={{ mr: 1, color: 'white' }} />
             <Typography variant="body2" color="white">cece@cecesdream.org</Typography>
           </Box>
-          <Button variant="contained" sx={{backgroundColor: 'rgb(255, 222, 89)', color: 'black', width: '200px', fontWeight: 700, mb: 1}} href="https://donorbox.org/cece-790449" target="_blank">Donate today</Button>
+          <Button variant="contained" sx={{backgroundColor: 'rgb(255, 222, 89)', color: 'black', width: '200px', fontWeight: 700, mt: 'auto'}} href="https://donorbox.org/cece-790449" target="_blank">Donate today</Button>
         </Box>
       </Box>
       <Box sx={{ background: theme.palette.background.paper, color: theme.palette.text.primary, textAlign: 'center', py: 1, mt: 6, fontSize: '1rem', borderRadius: 0 }}>

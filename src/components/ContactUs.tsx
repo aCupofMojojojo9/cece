@@ -18,21 +18,14 @@ export default function ContactUs() {
     <Box sx={{ maxWidth: 1100, mx: 'auto', mt: 8, mb: 8, p: { xs: 2, md: 4 }, background: '#fff', borderRadius: 4 }}>
       <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, justifyContent: 'space-between', alignItems: 'center', gap: 4, mb: 6 }}>
         <Box sx={{ flex: 1, textAlign: 'center' }}>
-          <IconButton sx={{ background: 'rgb(190, 34, 47)', mb: 2 }} size="large">
-            <EmailIcon sx={{ color: '#fff', fontSize: 40 }} />
-          </IconButton>
-          <Typography variant="h5" fontWeight={700} mb={1}>Have Questions?</Typography>
-          <Typography variant="body1" color="primary" fontWeight={700}>info@cecesdream.org</Typography>
-        </Box>
-        <Box sx={{ flex: 1, textAlign: 'center' }}>
-          <IconButton sx={{ background: 'rgb(190, 34, 47)', mb: 2 }} size="large">
+          <IconButton disabled sx={{ background: 'rgb(190, 34, 47)', mb: 2, '&.Mui-disabled': { background: 'rgb(190, 34, 47)', opacity: 1 } }} size="large">
             <ChatIcon sx={{ color: '#fff', fontSize: 40 }} />
           </IconButton>
-          <Typography variant="h5" fontWeight={700} mb={1}>Want to Talk with Us?</Typography>
-          <Typography variant="body1" fontWeight={700}>Use the Form Below</Typography>
+          <Typography variant="h5" fontWeight={700} mb={1}>Questions or Want to Get Involved?</Typography>
+          <Typography variant="body1" fontWeight={700}>Send us a message</Typography>
         </Box>
         <Box sx={{ flex: 1, textAlign: 'center' }}>
-          <IconButton sx={{ background: 'rgb(190, 34, 47)', mb: 2 }} size="large">
+          <IconButton disabled sx={{ background: 'rgb(190, 34, 47)', mb: 2, '&.Mui-disabled': { background: 'rgb(190, 34, 47)', opacity: 1 } }} size="large">
             <AccountBalanceWalletIcon sx={{ color: '#fff', fontSize: 40 }} />
           </IconButton>
           <Typography variant="h5" fontWeight={700} mb={1}>Need Donation Info?</Typography>
@@ -66,9 +59,9 @@ export default function ContactUs() {
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
             <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#1877F3', '&:hover': { background: '#1877F3' }, '&:active': { background: '#1877F3' } }}><FacebookIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ display: 'none', background: '#0A66C2', '&:hover': { background: '#0A66C2' }, '&:active': { background: '#0A66C2' } }}><LinkedInIcon sx={{ color: '#fff' }} /></IconButton>
             <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" size="large" sx={{ background: '#E1306C', '&:hover': { background: '#E1306C' }, '&:active': { background: '#E1306C' } }}><InstagramIcon sx={{ color: '#fff' }} /></IconButton>
-            <IconButton size="large" sx={{ background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
+            <IconButton size="large" sx={{ display: 'none', background: '#FF0000', '&:hover': { background: '#FF0000' }, '&:active': { background: '#FF0000' } }}><YouTubeIcon sx={{ color: '#fff' }} /></IconButton>
           </Box>
         </Box>
         <Box component="form" sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 2 }}>
