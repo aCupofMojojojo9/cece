@@ -51,7 +51,7 @@ export default function Footer() {
             component="img"
             image="/cece/photos/cece-logo-white-text.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 1 }}
+            sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 3 }}
           />
           <Typography 
             sx={{ 
