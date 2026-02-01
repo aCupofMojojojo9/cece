@@ -46,19 +46,19 @@ export default function Footer() {
         </Box>
 
         {/* Logo and Tagline Section */}
-        <Box sx={{ width: { xs: '100%', md: '33%' }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'flex-start', mt: { md: -2 } }}>
+        <Box sx={{ width: { xs: '100%', md: '33%' }, display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', alignSelf: 'flex-start' }}>
           <CardMedia
             component="img"
-            image="/cece/photos/cece-logo.png"
+            image="/cece/photos/cece-logo-white-text.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 1.5 }}
+            sx={{ height: "auto", width: { xs: 180, sm: 220, md: 240 }, objectFit: "contain", mb: 1 }}
           />
           <Typography 
             sx={{ 
               fontWeight: 700, 
               letterSpacing: 1, 
               fontSize: { xs: '0.6rem', sm: '0.65rem', md: '0.7rem' }, 
-              lineHeight: 1.5,
+              lineHeight: 1.4,
               color: 'white',
               textTransform: 'uppercase',
               mb: 0.5
