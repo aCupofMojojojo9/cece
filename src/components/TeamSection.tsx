@@ -172,7 +172,7 @@ export default function TeamSection() {
                     alignItems: "center",
                     justifyContent: "center",
                     width: "100%",
-                    py: 2,
+                    py: 4,
                   }}
                 >
                   <Box
@@ -187,11 +187,10 @@ export default function TeamSection() {
                     image="/cece/photos/cece-logo.png"
                     alt="divider"
                     sx={{
-                      width: 80,
-                      height: 40,
-                      objectFit: "cover",
-                      mx: 1,
-                      borderRadius: 1,
+                      width: 100,
+                      height: "auto",
+                      objectFit: "contain",
+                      mx: 3,
                     }}
                   />
                   <Box

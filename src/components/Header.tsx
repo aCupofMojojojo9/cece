@@ -97,13 +97,13 @@ export default function Header() {
 
   return (
     <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0, transition: 'all 0.3s ease-in-out' }}>
-      <Toolbar sx={{ minHeight: toolbarHeight, px: 2, display: "flex", justifyContent: "space-between", alignItems: "center", transition: 'min-height 0.3s ease-in-out' }}>
+      <Toolbar sx={{ minHeight: toolbarHeight, px: { xs: 3, md: 4 }, py: { xs: 2, md: 1 }, display: "flex", justifyContent: "space-between", alignItems: "center", transition: 'min-height 0.3s ease-in-out' }}>
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
             image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 180 : 280), objectFit: "contain", mb: !shrunk ? 0.5 : 0, transition: 'width 0.3s ease-in-out' }}
+            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 180 : 280), objectFit: "contain", mb: !shrunk ? 1 : 0, transition: 'width 0.3s ease-in-out' }}
           />
           {!shrunk && (
             <Box>
