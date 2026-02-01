@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
@@ -14,8 +15,6 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 import { useState, useEffect } from "react";
 import CardMedia from "@mui/material/CardMedia";
 import HomeIcon from "@mui/icons-material/Home";
@@ -31,10 +30,26 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const router = useRouter();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [shrunk, setShrunk] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -58,10 +73,14 @@ export default function Header() {
 
   const toolbarHeight = shrunk ? 92 : (isMobile ? 200 : 160);
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0}}>
       <Toolbar sx={{ minHeight: toolbarHeight, px: 2, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => window.location.href = "/"}>
+        <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
             image="/cece/cece-logo.png"
