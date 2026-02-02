@@ -18,7 +18,7 @@ export default function HomeContent() {
 
         <CardMedia
           component="img"
-          image="/cece/kids-running.jpg"
+          image="/cece/photos/kids-running.jpg"
           alt="Students"
           sx={{
             width: "100%",
@@ -63,14 +63,14 @@ export default function HomeContent() {
             }}
           >
             <StackedImageSection
-              image="https://cecesdream.org/_assets/media/899a07da178291c4f369ba924fc7a90e.jpg"
+              image="cece/photos/kids-in-classroom.jpg"
               alt="Students"
               title="Financial Aid"
             >
               <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
             </StackedImageSection>
             <StackedImageSection
-              image="https://cecesdream.org/_assets/media/c96566f56b1df185c78e67d21b59eca3.jpg"
+              image="cece/photos/kids-looking-out-window.jpg"
               alt="Students"
               title="Educational Resources"
             >
