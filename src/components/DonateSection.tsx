@@ -58,7 +58,7 @@ export default function DonateSection() {
         >
           <CardMedia
             component="img"
-            image="cece/photos/kids-smiling.jpg"
+            image="/cece/photos/kids-smiling.jpg"
             alt="Children"
             sx={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', minHeight: 220 }}
           />

@@ -63,14 +63,14 @@ export default function HomeContent() {
             }}
           >
             <StackedImageSection
-              image="cece/photos/kids-in-classroom.jpg"
+              image="/cece/photos/kids-in-classroom.jpg"
               alt="Students"
               title="Financial Aid"
             >
               <Typography paragraph>We provide financial assistance for tuition fees, helping students afford a quality higher education - a critical first step to helping disadvantaged communities thrive.</Typography>
             </StackedImageSection>
             <StackedImageSection
-              image="cece/photos/kids-looking-out-window.jpg"
+              image="/cece/photos/kids-looking-out-window.jpg"
               alt="Students"
               title="Educational Resources"
             >
@@ -83,7 +83,7 @@ export default function HomeContent() {
       <Box>
         <CardMedia
           component="img"
-          image="https://cecesdream.org/_assets/media/68d5836d0cf8c4943ec17ad96ddc2547.jpg"
+          image="/cece/photos/girl-in-red.jpg"
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
