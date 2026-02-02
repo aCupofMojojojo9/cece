@@ -22,8 +22,8 @@ import HomeIcon from "@mui/icons-material/Home";
 
 const navLinks = [
     { label: "Home", href: "/" },
-    { label: "Our story", href: "/our-story" },
-    { label: "What we do", href: "/what-we-do" },
+    { label: "Our Story", href: "/our-story" },
+    { label: "What We Do", href: "/what-we-do" },
     { label: "From the Field", href: "/from-the-field" },
     { label: "Our Team", href: "/our-team" },
     { label: "Contact Us", href: "/contact-us" },
