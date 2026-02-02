@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
@@ -9,9 +11,66 @@ import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CardMedia from '@mui/material/CardMedia';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
+const validationSchema = Yup.object({
+  firstName: Yup.string().required('First name is required'),
+  lastName: Yup.string().required('Last name is required'),
+  email: Yup.string().email('Invalid email address').required('Email is required'),
+  message: Yup.string().required('Message is required')
+});
 
 export default function ContactUs() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: ''
+    },
+    validationSchema: validationSchema,
+    onSubmit: async (values) => {
+      setIsSubmitting(true);
+      
+      try {
+        // Web3Forms - Get your free access key at https://web3forms.com
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            access_key: 'YOUR_ACCESS_KEY_HERE', // Get from https://web3forms.com
+            name: `${values.firstName} ${values.lastName}`,
+            email: values.email,
+            message: values.message,
+            subject: 'New Contact Form Submission from CECE Website'
+          })
+        });
+
+        const data = await response.json();
+        
+        if (data.success) {
+          setIsSubmitted(true);
+          formik.resetForm();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        console.error('Email send failed:', error);
+        alert('Failed to send message. Please try again.');
+      } finally {
+        setIsSubmitting(false);
+      }
+    }
+  });
+
   return (
           <><Box>
       <CardMedia
@@ -61,15 +120,148 @@ export default function ContactUs() {
               <IconButton sx={{ display: 'none', width: 56, height: 56, background: '#FF0000', borderRadius: 1.5, '&:hover': { background: '#FF0000', opacity: 0.9 } }}><YouTubeIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
             </Box>
           </Box>
-          <Box component="form" sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 2 }}>
+          <Box component="form" onSubmit={formik.handleSubmit} sx={{ flex: 2, display: 'flex', flexDirection: 'column', gap: 1, position: 'relative' }}>
+            {isSubmitted && (
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  background: 'rgba(255, 255, 255, 0.98)',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: 2,
+                  zIndex: 10,
+                  p: 4
+                }}
+              >
+                <CheckCircleIcon sx={{ fontSize: 80, color: 'rgb(76, 175, 80)', mb: 2 }} />
+                <Typography variant="h5" fontWeight={700} color="rgb(76, 175, 80)" mb={1}>
+                  Message Sent!
+                </Typography>
+                <Typography variant="body1" color="text.secondary" textAlign="center">
+                  Thank you for reaching out. We&apos;ll be in touch soon!
+                </Typography>
+              </Box>
+            )}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
-              <TextField label="Full Name" required variant="outlined" fullWidth />
-              <TextField label="Email" required variant="outlined" fullWidth />
+              <Box sx={{ flex: 1 }}>
+                <TextField 
+                  label="First Name" 
+                  required 
+                  variant="outlined" 
+                  fullWidth
+                  id="firstName"
+                  name="firstName"
+                  value={formik.values.firstName}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                <Typography 
+                  variant="caption" 
+                  color="error" 
+                  sx={{ 
+                    mt: 0.5, 
+                    display: 'block',
+                    minHeight: '16px',
+                    visibility: formik.touched.firstName && formik.errors.firstName ? 'visible' : 'hidden'
+                  }}
+                >
+                  {formik.touched.firstName && formik.errors.firstName ? formik.errors.firstName : '\u00A0'}
+                </Typography>
+              </Box>
+              <Box sx={{ flex: 1 }}>
+                <TextField 
+                  label="Last Name" 
+                  required 
+                  variant="outlined" 
+                  fullWidth
+                  id="lastName"
+                  name="lastName"
+                  value={formik.values.lastName}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                <Typography 
+                  variant="caption" 
+                  color="error" 
+                  sx={{ 
+                    mt: 0.5, 
+                    display: 'block',
+                    minHeight: '16px',
+                    visibility: formik.touched.lastName && formik.errors.lastName ? 'visible' : 'hidden'
+                  }}
+                >
+                  {formik.touched.lastName && formik.errors.lastName ? formik.errors.lastName : '\u00A0'}
+                </Typography>
+              </Box>
             </Box>
-            <TextField label="Message" required variant="outlined" fullWidth multiline minRows={5} />
+            <Box>
+              <TextField 
+                label="Email" 
+                required 
+                variant="outlined" 
+                fullWidth
+                id="email"
+                name="email"
+                type="email"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <Typography 
+                variant="caption" 
+                color="error" 
+                sx={{ 
+                  mt: 0.5, 
+                  display: 'block',
+                  minHeight: '16px',
+                  visibility: formik.touched.email && formik.errors.email ? 'visible' : 'hidden'
+                }}
+              >
+                {formik.touched.email && formik.errors.email ? formik.errors.email : '\u00A0'}
+              </Typography>
+            </Box>
+            <Box>
+              <TextField 
+                label="Message" 
+                required 
+                variant="outlined" 
+                fullWidth 
+                multiline 
+                minRows={5}
+                id="message"
+                name="message"
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              <Typography 
+                variant="caption" 
+                color="error" 
+                sx={{ 
+                  mt: 0.5, 
+                  display: 'block',
+                  minHeight: '16px',
+                  visibility: formik.touched.message && formik.errors.message ? 'visible' : 'hidden'
+                }}
+              >
+                {formik.touched.message && formik.errors.message ? formik.errors.message : '\u00A0'}
+              </Typography>
+            </Box>
             <Box sx={{ textAlign: 'right', mt: 2 }}>
-              <Button variant="contained" sx={{ px: 4, py: 1.5, fontWeight: 700, backgroundColor: 'rgb(190, 34, 47)', color: 'white', '&:hover': { backgroundColor: 'rgb(170, 30, 42)' } }}>
-                Send Message
+              <Button 
+                type="submit"
+                variant="outlined" 
+                color="primary"
+                disabled={isSubmitting}
+                sx={{ px: 4, py: 1.5, fontWeight: 700 }}
+              >
+                {isSubmitting ? 'Sending...' : 'Contact Us'}
               </Button>
             </Box>
           </Box>

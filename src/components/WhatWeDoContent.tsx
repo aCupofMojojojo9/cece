@@ -69,7 +69,7 @@ export default function WhatWeDoContent() {
               Our Approach
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-              At CECE&apos;s Dream, we believe that sustainable change comes from working hand-in-hand with the communities we serve. 
+              At Cece&apos;s Dream, we believe that sustainable change comes from working hand-in-hand with the communities we serve. 
               Our approach is built on three core principles: partnership, sustainability, and impact. We don&apos;t just provide 
               one-time assistance; we build lasting relationships and create programs that will continue to benefit children 
               and communities for years to come.
@@ -111,8 +111,8 @@ export default function WhatWeDoContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/liberia-children.jpg"
-              alt="Children in Liberia"
+              image="/cece/photos/kids-waving.jpg"
+              alt="Children Waving"
               sx={{
                 width: { xs: '100%', md: '45%' },
                 height: 'auto',
@@ -142,7 +142,7 @@ export default function WhatWeDoContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row-reverse' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/kids-smiling.jpg"
+              image="/cece/photos/kids-in-doorway.jpg"
               alt="Happy students"
               sx={{
                 width: { xs: '100%', md: '45%' },

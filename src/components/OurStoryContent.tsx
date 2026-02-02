@@ -13,13 +13,13 @@ export default function OurStoryContent() {
         {/* Hero Image */}
         <CardMedia
           component="img"
-          image="/cece/photos/kids-smiling.jpg"
+          image="/cece/photos/kids-classroom.jpg"
           alt="CECE's Dream Story"
           sx={{
             width: "100%",
             height: { xs: 250, sm: 350, md: 500 },
             objectFit: "cover",
-            objectPosition: "center 30%"
+            objectPosition: "center 40%"
           }}
         />
 
@@ -35,13 +35,13 @@ export default function OurStoryContent() {
               How It All Began
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-              CECE&apos;s Dream was born from a deeply personal journey and a vision to transform education in underserved communities. 
+              Cece&apos;s Dream was born from a deeply personal journey and a vision to transform education in underserved communities. 
               Founded by David Ziama, our organization represents the culmination of years of dedication to community empowerment 
               and educational excellence. David&apos;s own experiences growing up in Liberia and witnessing the transformative power of 
               education inspired him to create an organization that could bridge the gap between aspiration and opportunity.
             </Typography>
             <Typography variant="body1" paragraph sx={{ fontSize: '1.1rem', lineHeight: 1.8 }}>
-              The name &quot;CECE&quot; stands for Community Empowerment and Childhood Education – two pillars that form the foundation of 
+              The name &quot;Cece&quot; stands for Community Empowerment and Childhood Education – two pillars that form the foundation of 
               everything we do. We believe that education is not just about books and classrooms; it&apos;s about empowering entire 
               communities to break cycles of poverty and create lasting change for future generations.
             </Typography>
@@ -51,7 +51,7 @@ export default function OurStoryContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/kids-reading.jpg"
+              image="/cece/photos/kids-on-sidewalk.jpg"
               alt="Children reading"
               sx={{
                 width: { xs: '100%', md: '50%' },
@@ -80,7 +80,7 @@ export default function OurStoryContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row-reverse' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/liberia-children.jpg"
+              image="/cece/photos/students.jpg"
               alt="Children in Liberia"
               sx={{
                 width: { xs: '100%', md: '50%' },

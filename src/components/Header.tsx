@@ -38,7 +38,7 @@ export default function Header() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 900);
+      setIsMobile(window.innerWidth < 1150);
     };
     
     checkMobile();
@@ -97,13 +97,19 @@ export default function Header() {
 
   return (
     <AppBar position="sticky" color="primary" elevation={0} sx={{ borderRadius: 0, transition: 'all 0.3s ease-in-out' }}>
-      <Toolbar sx={{ minHeight: toolbarHeight, px: { xs: 3, md: 4 }, py: { xs: 2, md: 1 }, display: "flex", justifyContent: "space-between", alignItems: "center", transition: 'min-height 0.3s ease-in-out' }}>
+      <Toolbar sx={{ minHeight: toolbarHeight, px: { xs: 1.5, sm: 2, md: 4 }, py: { xs: 1, md: 1 }, display: "flex", justifyContent: "space-between", alignItems: "center", transition: 'min-height 0.3s ease-in-out' }}>
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
             image="/cece/photos/cece-logo.png"
             alt="CECE's Dream Logo"
-            sx={{ height: "auto", width: shrunk ? 100 : (isMobile ? 180 : 280), objectFit: "contain", mb: !shrunk ? 1 : 0, transition: 'width 0.3s ease-in-out' }}
+            sx={{ 
+              height: "auto", 
+              width: shrunk ? 100 : { xs: 180, sm: 200, md: 220, lg: 280 }, 
+              objectFit: "contain", 
+              mb: !shrunk ? { xs: 0.5, md: 1 } : 0, 
+              transition: 'width 0.3s ease-in-out' 
+            }}
           />
           {!shrunk && (
             <Box>
@@ -136,13 +142,13 @@ export default function Header() {
         </Box>
           {isMobile ? (
             <Box sx={{ display: "flex", alignItems: "center", justifyContent: "flex-end" }}>
-              <IconButton color="inherit" edge="end" onClick={() => setDrawerOpen(true)}>
-                <MenuIcon />
+              <IconButton color="inherit" edge="end" onClick={() => setDrawerOpen(true)} sx={{ p: { xs: 0.5, sm: 1 }, mr: { xs: 0.5, sm: 1 } }}>
+                <MenuIcon sx={{ fontSize: { xs: 32, sm: 36 } }} />
               </IconButton>
               <Drawer anchor="right" open={drawerOpen} onClose={() => setDrawerOpen(false)}>
                 <Box sx={{ display: 'flex', justifyContent: 'flex-end', p: 1 }}>
-                  <IconButton onClick={() => setDrawerOpen(false)}>
-                    <CloseIcon />
+                  <IconButton onClick={() => setDrawerOpen(false)} sx={{ p: 1.5 }}>
+                    <CloseIcon sx={{ fontSize: { xs: 32, sm: 36 } }} />
                   </IconButton>
                 </Box>
                 <List sx={{ minWidth: 250 }}>

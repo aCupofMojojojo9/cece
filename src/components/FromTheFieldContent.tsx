@@ -4,8 +4,6 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 
@@ -16,7 +14,7 @@ const blogPosts = [
     date: "January 15, 2026",
     author: "David Ziama",
     category: "Updates",
-    image: "/cece/photos/liberia-children.jpg",
+    image: "/cece/photos/liberia-aerial-view.jpg",
     excerpt: "As we move into the new year, we're excited to announce concrete steps toward our mission...",
     content: `As we move into the new year, we're thrilled to share that CECE's Dream is taking decisive action toward our mission of empowering communities through education. After months of careful planning and relationship building, we're ready to make our vision a reality.
 
@@ -55,9 +53,9 @@ Stay tuned for more updates as we prepare for this exciting trip!`
     id: 1,
     title: "Laying the Foundation: Planning for 2026",
     date: "December 10, 2025",
-    author: "CECE's Dream Team",
+    author: "David Ziama",
     category: "Planning",
-    image: "/cece/photos/kids-reading.jpg",
+    image: "/cece/photos/mission.jpg",
     excerpt: "As we close out 2025, our team is deep in the planning stages for an impactful 2026...",
     content: `As we approach the end of 2025, the CECE's Dream team is hard at work laying the groundwork for what promises to be a transformative year ahead. These early days are critical – they're when vision meets strategy, when passion becomes practical action.
 
@@ -103,54 +101,129 @@ export default function FromTheFieldContent() {
     <>
       <Box>
         {/* Hero Section */}
-        <Box sx={{ background: 'linear-gradient(135deg, #003D7A 0%, #003366 100%)', py: 8, color: 'white' }}>
-          <Container maxWidth="lg">
-            <Typography variant="h2" fontWeight={700} textAlign="center" mb={2}>
-              From the Field
-            </Typography>
-            <Typography variant="h6" textAlign="center" sx={{ maxWidth: 700, mx: 'auto' }}>
-              Follow our progress as we work to empower communities and transform lives through education
-            </Typography>
-          </Container>
+        <Box sx={{ position: 'relative' }}>
+          <CardMedia
+            component="img"
+            image="/cece/photos/hands-make-a-heart.jpg"
+            alt="From the Field"
+            sx={{
+              width: "100%",
+              height: { xs: 350, sm: 450, md: 600 },
+              objectFit: "cover",
+              objectPosition: "center 45%"
+            }}
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              background: 'linear-gradient(to top, rgba(0, 61, 122, 0.9) 0%, rgba(0, 61, 122, 0.6) 50%, transparent 100%)',
+              py: { xs: 6, md: 8 },
+              color: 'white'
+            }}
+          >
+            <Container maxWidth="lg">
+              <Typography 
+                variant="h2" 
+                fontWeight={700} 
+                textAlign="center" 
+                mb={2} 
+                sx={{ 
+                  color: 'white',
+                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)',
+                  fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' }
+                }}
+              >
+                From the Field
+              </Typography>
+              <Typography 
+                variant="h6" 
+                textAlign="center" 
+                sx={{ 
+                  maxWidth: 700, 
+                  mx: 'auto',
+                  color: 'white',
+                  textShadow: '1px 1px 4px rgba(0, 0, 0, 0.8)',
+                  fontSize: { xs: '1rem', sm: '1.1rem', md: '1.25rem' }
+                }}
+              >
+                Follow our progress as we work to empower communities and transform lives through education
+              </Typography>
+            </Container>
+          </Box>
         </Box>
 
         {/* Blog Posts */}
         <Container maxWidth="lg" sx={{ py: 8 }}>
           {blogPosts.map((post, index) => (
-            <Card key={post.id} sx={{ mb: 6, boxShadow: 3, overflow: 'hidden' }}>
-              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: index % 2 === 0 ? 'row' : 'row-reverse' } }}>
-                <CardMedia
-                  component="img"
-                  image={post.image}
-                  alt={post.title}
-                  sx={{
-                    width: { xs: '100%', md: '40%' },
-                    height: { xs: 250, md: 'auto' },
-                    objectFit: 'cover'
+            <Box key={post.id}>
+              <Box sx={{ mb: 6 }}>
+                <Box sx={{ position: 'relative' }}>
+                  <CardMedia
+                    component="img"
+                    image={post.image}
+                    alt={post.title}
+                    sx={{
+                      width: '100%',
+                      height: { xs: 300, sm: 400, md: 500 },
+                      objectFit: 'cover',
+                      borderRadius: '8px 8px 0 0'
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      position: 'absolute',
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      background: 'linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%)',
+                      p: { xs: 3, md: 5 }
+                    }}
+                  >
+                    <Typography 
+                      variant="h3" 
+                      fontWeight={700} 
+                      color="white" 
+                      sx={{ 
+                        fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' },
+                        textShadow: '2px 2px 8px rgba(0, 0, 0, 0.8)'
+                      }}
+                    >
+                      {post.title}
+                    </Typography>
+                  </Box>
+                </Box>
+                
+                <Box 
+                  sx={{ 
+                    px: { xs: 3, md: 4 },
+                    py: { xs: 3, md: 4 },
+                    backgroundColor: 'rgba(0, 61, 122, 0.03)',
+                    borderRadius: '0 0 8px 8px'
                   }}
-                />
-                <CardContent sx={{ flex: 1, p: { xs: 3, md: 5 } }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                >
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
                     <Chip label={post.category} color="primary" size="small" />
                     <Typography variant="body2" color="text.secondary">
                       {post.date}
                     </Typography>
+                    <Typography variant="body2" color="text.secondary" fontStyle="italic">
+                      By {post.author}
+                    </Typography>
                   </Box>
                   
-                  <Typography variant="h4" fontWeight={700} mb={2} color="primary">
-                    {post.title}
-                  </Typography>
-                  
-                  <Typography variant="subtitle1" color="text.secondary" mb={3} fontStyle="italic">
-                    By {post.author}
-                  </Typography>
-                  
-                  <Typography variant="body1" paragraph sx={{ fontSize: '1.05rem', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
+                  <Typography variant="body1" sx={{ fontSize: '1.05rem', lineHeight: 1.8, whiteSpace: 'pre-line' }}>
                     {post.content}
                   </Typography>
-                </CardContent>
+                </Box>
               </Box>
-            </Card>
+              
+              {index < blogPosts.length - 1 && (
+                <Box sx={{ my: 8 }} />
+              )}
+            </Box>
           ))}
         </Container>
 
