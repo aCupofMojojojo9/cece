@@ -83,7 +83,7 @@ export default function HomeContent() {
       <Box>
         <CardMedia
           component="img"
-          image="/cece/photos/girl-in-red.jpg"
+          image="https://cecesdream.org/_assets/media/68d5836d0cf8c4943ec17ad96ddc2547.jpg"
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
