@@ -17,13 +17,11 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import { useState, useEffect } from "react";
 import CardMedia from "@mui/material/CardMedia";
-import HomeIcon from "@mui/icons-material/Home";
 
 
 const navLinks = [
     { label: "Home", href: "/" },
     { label: "Our Story", href: "/our-story" },
-    { label: "What We Do", href: "/what-we-do" },
     { label: "From the Field", href: "/from-the-field" },
     { label: "Our Team", href: "/our-team" },
     { label: "Contact Us", href: "/contact-us" },
@@ -165,11 +163,9 @@ export default function Header() {
           ) : (
             <Box sx={{ display: "flex", gap: 1 }}>
               {navLinks.map((link) => (
-                link.label === "Home"
-                  ? <IconButton key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5 }}><HomeIcon /></IconButton>
-                  : <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5 }}>
-                      {link.label}
-                    </Button>
+                <Button key={link.label} color="inherit" component={Link} href={link.href} sx={{ px: 1.5, py: 0.5, borderRadius: '8px', minHeight: 0 }}>
+                  {link.label}
+                </Button>
               ))}
             </Box>
           )}
