@@ -19,6 +19,9 @@ package-lock.json
 .DS_Store
 *.pem
 
+# photos — full trip library (too large to commit; use public/site-photos/ instead)
+public/photos/
+
 # debug
 npm-debug.log*
 yarn-debug.log*

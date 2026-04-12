@@ -44,7 +44,7 @@ export default function WhatWeDoContent() {
         {/* Hero Image */}
         <CardMedia
           component="img"
-          image="/cece/photos/kids-reading.jpeg"
+          image="/cece/site-photos/kids-reading.jpeg"
           alt="What We Do"
           sx={{
             width: "100%",
@@ -111,7 +111,7 @@ export default function WhatWeDoContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/kids-waving.jpg"
+              image="/cece/site-photos/kids-waving.jpg"
               alt="Children Waving"
               sx={{
                 width: { xs: '100%', md: '45%' },
@@ -142,7 +142,7 @@ export default function WhatWeDoContent() {
           <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row-reverse' }, gap: 4, mb: 8, alignItems: 'center' }}>
             <CardMedia
               component="img"
-              image="/cece/photos/kids-in-doorway.jpg"
+              image="/cece/site-photos/kids-in-doorway.jpg"
               alt="Happy students"
               sx={{
                 width: { xs: '100%', md: '45%' },
@@ -227,7 +227,7 @@ export default function WhatWeDoContent() {
             >
               <CardMedia
                 component="img"
-                image="/cece/photos/kids-smiling.jpg"
+                image="/cece/site-photos/kids-smiling.jpg"
                 alt="Children"
                 sx={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 20%', minHeight: 220 }}
               />

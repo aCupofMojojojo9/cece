@@ -1,0 +1,30 @@
+{
+  "hero": {
+    "image": "/cece/site-photos/kids-running.jpg",
+    "heading": "Children We Serve",
+    "subheading": "Every child deserves the chance to learn, grow, and dream."
+  },
+  "gallery": {
+    "photos": [
+      "/cece/site-photos/scene-01.jpg",
+      "/cece/site-photos/scene-02.jpg",
+      "/cece/site-photos/scene-04.jpg",
+      "/cece/site-photos/scene-06.jpg",
+      "/cece/site-photos/scene-07.jpg",
+      "/cece/site-photos/scene-10.jpg",
+      "/cece/site-photos/scene-12.jpg"
+    ]
+  },
+  "about": {
+    "heading": "The Children Behind Our Mission",
+    "body": "In the communities where CECE's Dream operates, thousands of children face barriers to education that most of us will never know. Poverty, distance, and lack of resources force many families to make an impossible choice — and far too often, school loses.",
+    "body2": "These children are bright, curious, and full of potential. With the right support, they thrive. Our programs provide school tuition, learning materials, and a safe environment where every child is seen, valued, and encouraged to reach their potential."
+  },
+  "cta": {
+    "heading": "Be the Reason a Child Stays in School",
+    "body": "Your donation goes directly toward giving a child access to education, materials, and the support they need to build a future. Every dollar makes a real difference.",
+    "buttonLabel": "Donate Now",
+    "disclaimer": "CECE is a 501(c)(3) nonprofit — all donations are tax-deductible."
+  },
+  "donateUrl": "https://donorbox.org/cece-790449"
+}

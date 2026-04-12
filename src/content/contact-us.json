@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "image": "/cece/site-photos/kids-smiles.jpg"
+  },
+  "getInvolved": {
+    "heading": "Questions or Want to Get Involved?",
+    "subheading": "Fill out the form below"
+  },
+  "donate": {
+    "heading": "Need Donation Info?",
+    "linkLabel": "Click for Donation Page",
+    "linkUrl": "https://donorbox.org/cece-790449"
+  },
+  "form": {
+    "heading": "Send Us a Message!",
+    "intro": "We'd love to hear from you! Share your questions or interest in getting involved, and we'll respond promptly.",
+    "socialLabel": "Follow us on Social Media",
+    "firstNameLabel": "First Name",
+    "lastNameLabel": "Last Name",
+    "emailLabel": "Email Address",
+    "messageLabel": "Message",
+    "submitButton": "Send Message",
+    "submittingButton": "Sending...",
+    "successHeading": "Message Sent!",
+    "successMessage": "Thank you for reaching out. We'll get back to you as soon as possible.",
+    "errorMessage": "Failed to send message. Please try again.",
+    "validation": {
+      "firstNameRequired": "First name is required",
+      "lastNameRequired": "Last name is required",
+      "emailInvalid": "Invalid email address",
+      "emailRequired": "Email is required",
+      "messageRequired": "Message is required"
+    }
+  },
+  "social": {
+    "facebookUrl": "https://www.facebook.com/cecesdreamnonprofit",
+    "instagramUrl": "https://www.instagram.com/cecesdreamnonprofit"
+  }
+}

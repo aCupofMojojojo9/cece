@@ -22,7 +22,7 @@ export default function FromTheFieldContent({ posts }: Props) {
         <Box sx={{ position: 'relative' }}>
           <CardMedia
             component="img"
-            image="/cece/photos/hands-make-a-heart.jpg"
+            image="/cece/site-photos/hands-make-a-heart.jpg"
             alt="From the Field"
             sx={{
               width: "100%",

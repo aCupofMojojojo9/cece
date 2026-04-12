@@ -1,0 +1,20 @@
+{
+  "social": {
+    "heading": "Follow Us",
+    "description": "Join us on social media and follow our journey as we empower communities and transform lives through education.",
+    "facebookUrl": "https://www.facebook.com/cecesdreamnonprofit",
+    "instagramUrl": "https://www.instagram.com/cecesdreamnonprofit"
+  },
+  "tagline": {
+    "line1": "Community Empowerment + Childhood Education",
+    "line2": "A nonprofit organization"
+  },
+  "contact": {
+    "heading": "Contact CECE Dream",
+    "address": "Kansas City, MO, USA",
+    "email": "cece@cecesdream.org",
+    "donateButtonLabel": "Donate today",
+    "donateUrl": "https://donorbox.org/cece-790449"
+  },
+  "copyright": "© 2025 CECE's Dream. All rights reserved. CECE is a registered 501(c)(3) nonprofit organization."
+}

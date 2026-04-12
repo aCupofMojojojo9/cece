@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "image": "/cece/site-photos/kids-classroom.jpg"
+  },
+  "heading": "Our Story",
+  "howItBegan": {
+    "heading": "How It All Began",
+    "image": "/cece/site-photos/scene-03.jpg",
+    "paragraph1": "Cece's Dream was born from a deeply personal journey and a vision to transform education in underserved communities. Founded by David Ziama, our organization represents the culmination of years of dedication to community empowerment and educational excellence. David's own experiences growing up in Liberia and witnessing the transformative power of education inspired him to create an organization that could bridge the gap between aspiration and opportunity.",
+    "paragraph2": "The name \"Cece\" stands for Community Empowerment and Childhood Education – two pillars that form the foundation of everything we do. We believe that education is not just about books and classrooms; it's about empowering entire communities to break cycles of poverty and create lasting change for future generations."
+  },
+  "mission": {
+    "heading": "Our Mission",
+    "paragraph1": "We are committed to providing educational resources, support, and opportunities to children in Liberia and beyond. Through strategic partnerships with local schools and community leaders, we work to ensure that every child has access to quality education, regardless of their circumstances.",
+    "paragraph2": "Our approach is holistic – we don't just provide funding; we build relationships, foster community engagement, and create sustainable programs that will continue to benefit children for years to come."
+  },
+  "impact": {
+    "heading": "Our Impact",
+    "image": "/cece/site-photos/scene-09.jpg",
+    "paragraph1": "Since our founding, we've been dedicated to making a measurable difference in the lives of children and their communities. We work directly with schools in Liberia, providing essential resources, funding for infrastructure improvements, and support for teachers and administrators.",
+    "paragraph2": "Our board of dedicated volunteers brings together diverse expertise in education, technology, finance, and community development. Together, we're building a future where every child has the opportunity to pursue their dreams through education."
+  },
+  "vision": {
+    "heading": "Our Vision",
+    "quote": "\"We envision a world where every child, regardless of their circumstances, has access to quality education and the opportunity to build a brighter future. Through community empowerment and strategic partnerships, we're turning this vision into reality, one classroom at a time.\""
+  }
+}

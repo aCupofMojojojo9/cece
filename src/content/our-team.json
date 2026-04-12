@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "image": "/cece/site-photos/kids-in-classroom.jpg"
+  },
+  "heading": "Meet Our Team",
+  "members": [
+    {
+      "name": "David Ziama",
+      "role": "Founder, Board Member",
+      "image": "/cece/site-photos/david-ziama.png",
+      "bio": "David is passionate about education and community empowerment. He has worked in various nonprofit roles and is dedicated to helping underserved youth.",
+      "linkedInUrl": "https://www.linkedin.com/in/david-ziama-331274b6/"
+    },
+    {
+      "name": "Peter Lazarz",
+      "role": "Board Member",
+      "image": "/cece/site-photos/peter-lazarz.png",
+      "bio": "Peter brings over 20 years of experience in the tech industry, focusing on software development and project management.",
+      "linkedInUrl": "https://www.linkedin.com/in/peter-lazarz-52997657/"
+    },
+    {
+      "name": "Tera Palozola",
+      "role": "Board Member",
+      "image": "/cece/site-photos/tera-palozola.png",
+      "bio": "Tera is a dedicated advocate for mental health awareness and has been instrumental in various community outreach programs.",
+      "linkedInUrl": "https://www.linkedin.com/in/terapalozola/"
+    },
+    {
+      "name": "Sandra Bruxvoort",
+      "role": "Board Member",
+      "image": "/cece/site-photos/sandra-bruxvoort.png",
+      "bio": "Sandra has a background in finance and administration, with a passion for helping nonprofits achieve their financial goals.",
+      "linkedInUrl": ""
+    },
+    {
+      "name": "Jared Vanlandingham",
+      "role": "Board Member",
+      "image": "/cece/site-photos/jared-vanlandingham.jpg",
+      "bio": "Jared is a community leader with a focus on youth mentorship and development programs.",
+      "linkedInUrl": "https://www.linkedin.com/in/jared-vanlandingham-830a9455/"
+    },
+    {
+      "name": "Ashley Steyer",
+      "role": "Board Member",
+      "image": "/cece/site-photos/ashley-steyer.png",
+      "bio": "Ashley is passionate about education and has been involved in various teaching and curriculum development initiatives.",
+      "linkedInUrl": "https://www.linkedin.com/in/ashleynsteyer/"
+    },
+    {
+      "name": "Michael Taylor",
+      "role": "Board Member",
+      "image": "/cece/site-photos/michael-taylor.png",
+      "bio": "Michael has a diverse background in business and technology, with a strong commitment to community service.",
+      "linkedInUrl": "https://www.linkedin.com/in/michaelraytaylor/"
+    },
+    {
+      "name": "Jenny Waddle",
+      "role": "Board Member",
+      "image": "/cece/site-photos/jenny-waddle.png",
+      "bio": "Jenny has a diverse background in business and technology, with a strong commitment to community service.",
+      "linkedInUrl": ""
+    }
+  ]
+}

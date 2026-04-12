@@ -15,12 +15,13 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CardMedia from '@mui/material/CardMedia';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import content from '../content/contact-us.json';
 
 const validationSchema = Yup.object({
-  firstName: Yup.string().required('First name is required'),
-  lastName: Yup.string().required('Last name is required'),
-  email: Yup.string().email('Invalid email address').required('Email is required'),
-  message: Yup.string().required('Message is required')
+  firstName: Yup.string().required(content.form.validation.firstNameRequired),
+  lastName: Yup.string().required(content.form.validation.lastNameRequired),
+  email: Yup.string().email(content.form.validation.emailInvalid).required(content.form.validation.emailRequired),
+  message: Yup.string().required(content.form.validation.messageRequired)
 });
 
 export default function ContactUs() {
@@ -75,7 +76,7 @@ export default function ContactUs() {
           <><Box>
       <CardMedia
         component="img"
-        image="/cece/photos/kids-smiles.jpg"
+        image={content.hero.image}
         alt="Children Reading Books"
         sx={{
           width: "100%",
@@ -89,34 +90,34 @@ export default function ContactUs() {
             <IconButton disabled sx={{ background: 'rgb(190, 34, 47)', mb: 2, '&.Mui-disabled': { background: 'rgb(190, 34, 47)', opacity: 1 } }} size="large">
               <ChatIcon sx={{ color: '#fff', fontSize: 40 }} />
             </IconButton>
-            <Typography variant="h5" fontWeight={700} mb={1}>Questions or Want to Get Involved?</Typography>
-            <Typography variant="body1" fontWeight={700} color="text.secondary">Fill out the form below</Typography>
+            <Typography variant="h5" fontWeight={700} mb={1}>{content.getInvolved.heading}</Typography>
+            <Typography variant="body1" fontWeight={700} color="text.secondary">{content.getInvolved.subheading}</Typography>
           </Box>
           <Box sx={{ flex: 1, textAlign: 'center', maxWidth: 400 }}>
             <IconButton disabled sx={{ background: 'rgb(190, 34, 47)', mb: 2, '&.Mui-disabled': { background: 'rgb(190, 34, 47)', opacity: 1 } }} size="large">
               <VolunteerActivismIcon sx={{ color: '#fff', fontSize: 40 }} />
             </IconButton>
-            <Typography variant="h5" fontWeight={700} mb={1}>Need Donation Info?</Typography>
-            <Button variant="text" color="primary" href="https://donorbox.org/cece-790449" target="_blank" sx={{ fontWeight: 700 }}>Click for Donation Page</Button>
+            <Typography variant="h5" fontWeight={700} mb={1}>{content.donate.heading}</Typography>
+            <Button variant="text" color="primary" href={content.donate.linkUrl} target="_blank" sx={{ fontWeight: 700 }}>{content.donate.linkLabel}</Button>
           </Box>
         </Box>
         <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 6, mt: 4 }}>
           <Box sx={{ flex: 1, minWidth: 280 }}>
-            <Typography variant="h5" fontWeight={700} mb={2}>Send Us a Message!</Typography>
+            <Typography variant="h5" fontWeight={700} mb={2}>{content.form.heading}</Typography>
             <Typography variant="body1" color="text.secondary" mb={3}>
-              We&apos;d love to hear from you! Share your questions or interest in getting involved, and we&apos;ll respond promptly.
+              {content.form.intro}
             </Typography>
             <Typography variant="body1" color="primary" fontWeight={700} mb={2}>
-              Follow us on Social Media
+              {content.form.socialLabel}
             </Typography>
             <Box sx={{ display: 'flex', gap: 2, mb: 2 }}>
-              <IconButton component="a" href="https://www.facebook.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: '#1877F3', borderRadius: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center', '&:hover': { background: '#1877F3', opacity: 0.9 } }}>
+              <IconButton component="a" href={content.social.facebookUrl} target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: '#1877F3', borderRadius: 1.5, display: 'flex', alignItems: 'center', justifyContent: 'center', '&:hover': { background: '#1877F3', opacity: 0.9 } }}>
                 <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M32.67 56V30.5h8.55l1.28-9.93h-9.83v-6.35c0-2.87.8-4.83 4.92-4.83h5.26V.37A70.5 70.5 0 0 0 35.2 0c-7.58 0-12.77 4.63-12.77 13.13v7.33h-8.58V30.5h8.58V56h9.24z" fill="#fff"/>
                 </svg>
               </IconButton>
               <IconButton sx={{ display: 'none', width: 56, height: 56, background: '#0A66C2', borderRadius: 1.5, '&:hover': { background: '#0A66C2', opacity: 0.9 } }}><LinkedInIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
-              <IconButton component="a" href="https://www.instagram.com/cecesdreamnonprofit" target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', borderRadius: 1.5, '&:hover': { opacity: 0.9 } }}><InstagramIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
+              <IconButton component="a" href={content.social.instagramUrl} target="_blank" rel="noopener noreferrer" sx={{ width: 56, height: 56, background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', borderRadius: 1.5, '&:hover': { opacity: 0.9 } }}><InstagramIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
               <IconButton sx={{ display: 'none', width: 56, height: 56, background: '#FF0000', borderRadius: 1.5, '&:hover': { background: '#FF0000', opacity: 0.9 } }}><YouTubeIcon sx={{ color: '#fff', fontSize: 44 }} /></IconButton>
             </Box>
           </Box>
@@ -141,17 +142,17 @@ export default function ContactUs() {
               >
                 <CheckCircleIcon sx={{ fontSize: 80, color: 'rgb(76, 175, 80)', mb: 2 }} />
                 <Typography variant="h5" fontWeight={700} color="rgb(76, 175, 80)" mb={1}>
-                  Message Sent!
+                  {content.form.successHeading}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" textAlign="center">
-                  Thank you for reaching out. We&apos;ll be in touch soon!
+                  {content.form.successMessage}
                 </Typography>
               </Box>
             )}
             <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 2 }}>
               <Box sx={{ flex: 1 }}>
                 <TextField 
-                  label="First Name" 
+                  label={content.form.firstNameLabel} 
                   required 
                   variant="outlined" 
                   fullWidth
@@ -176,7 +177,7 @@ export default function ContactUs() {
               </Box>
               <Box sx={{ flex: 1 }}>
                 <TextField 
-                  label="Last Name" 
+                  label={content.form.lastNameLabel} 
                   required 
                   variant="outlined" 
                   fullWidth
@@ -202,7 +203,7 @@ export default function ContactUs() {
             </Box>
             <Box>
               <TextField 
-                label="Email" 
+                label={content.form.emailLabel} 
                 required 
                 variant="outlined" 
                 fullWidth
@@ -228,7 +229,7 @@ export default function ContactUs() {
             </Box>
             <Box>
               <TextField 
-                label="Message" 
+                label={content.form.messageLabel} 
                 required 
                 variant="outlined" 
                 fullWidth 
@@ -261,7 +262,7 @@ export default function ContactUs() {
                 disabled={isSubmitting}
                 sx={{ px: 4, py: 1.5, fontWeight: 700 }}
               >
-                {isSubmitting ? 'Sending...' : 'Contact Us'}
+                {isSubmitting ? content.form.submittingButton : content.form.submitButton}
               </Button>
             </Box>
           </Box>

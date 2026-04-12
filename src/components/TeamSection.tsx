@@ -2,66 +2,9 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CardMedia from "@mui/material/CardMedia";
 import IconButton from "@mui/material/IconButton";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import content from "../content/our-team.json";
 
-const teamMembers = [
-	{
-		name: "David Ziama",
-		role: "Founder, Board Member",
-		image: "/cece/photos/david-ziama.png",
-		bio: "David is passionate about education and community empowerment. He has worked in various nonprofit roles and is dedicated to helping underserved youth.",
-		linkedInUrl: "https://www.linkedin.com/in/david-ziama-331274b6/",
-	},
-	{
-		name: "Peter Lazarz",
-		role: "Board Member",
-		image: "/cece/photos/peter-lazarz.png",
-		bio: "Peter brings over 20 years of experience in the tech industry, focusing on software development and project management.",
-		linkedInUrl: "https://www.linkedin.com/in/peter-lazarz-52997657/",
-	},
-	{
-		name: "Tera Palozola",
-		role: "Board Member",
-		image: "/cece/photos/tera-palozola.png",
-		bio: "Tera is a dedicated advocate for mental health awareness and has been instrumental in various community outreach programs.",
-		linkedInUrl: "https://www.linkedin.com/in/terapalozola/",
-	},
-	{
-		name: "Sandra Bruxvoort",
-		role: "Board Member",
-		image: "/cece/photos/sandra-bruxvoort.png",
-		bio: "Sandra has a background in finance and administration, with a passion for helping nonprofits achieve their financial goals.",
-		linkedInUrl: "",
-	},
-	{
-		name: "Jared Vanlandingham",
-		role: "Board Member",
-		image: "/cece/photos/jared-vanlandingham.jpg",
-		bio: "Jared is a community leader with a focus on youth mentorship and development programs.",
-		linkedInUrl: "https://www.linkedin.com/in/jared-vanlandingham-830a9455/",
-	},
-	{
-		name: "Ashley Steyer",
-		role: "Board Member",
-		image: "/cece/photos/ashley-steyer.png",
-		bio: "Ashley is passionate about education and has been involved in various teaching and curriculum development initiatives.",
-		linkedInUrl: "https://www.linkedin.com/in/ashleynsteyer/",
-	},
-	{
-		name: "Michael Taylor",
-		role: "Board Member",
-		image: "/cece/photos/michael-taylor.png",
-		bio: "Michael has a diverse background in business and technology, with a strong commitment to community service.",
-		linkedInUrl: "https://www.linkedin.com/in/michaelraytaylor/",
-	},
-	{
-		name: "Jenny Waddle",
-		role: "Board Member",
-		image: "/cece/photos/jenny-waddle.png",
-		bio: "Jenny has a diverse background in business and technology, with a strong commitment to community service.",
-		linkedInUrl: "",
-	},
-];
+const teamMembers = content.members;
 
 
 
@@ -71,7 +14,7 @@ export default function TeamSection() {
       <Box>
         <CardMedia
           component="img"
-          image="/cece/photos/kids-in-classroom.jpg"
+          image={content.hero.image}
           alt="Children Reading Books"
           sx={{ width: "100%",
           height: { xs: 180, sm: 270, md: 470 },
@@ -87,7 +30,7 @@ export default function TeamSection() {
           mb={4}
           textAlign="center"
         >
-          Meet Our Team
+          {content.heading}
         </Typography>
         <Box sx={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {teamMembers.map((member, idx) => (

@@ -24,6 +24,7 @@ const navLinks = [
     { label: "Our Story", href: "/our-story" },
     { label: "From the Field", href: "/from-the-field" },
     { label: "Our Team", href: "/our-team" },
+    { label: "Children We Serve", href: "/children-we-serve" },
     { label: "Contact Us", href: "/contact-us" },
 ];
 
@@ -99,7 +100,7 @@ export default function Header() {
         <Box sx={{ display: "flex", flexDirection: "column", alignItems: "flex-start", cursor: "pointer" }} onClick={() => router.push("/")}>
           <CardMedia
             component="img"
-            image="/cece/photos/cece-logo.png"
+            image="/cece/site-photos/cece-logo.png"
             alt="CECE's Dream Logo"
             sx={{ 
               height: "auto", 
