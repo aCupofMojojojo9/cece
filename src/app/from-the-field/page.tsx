@@ -1,7 +1,7 @@
-import FromTheFieldContent from "../../components/FromTheFieldContent";
+import { getBlogPosts } from '../../lib/getBlogPosts';
+import FromTheFieldContent from '../../components/FromTheFieldContent';
 
 export default function FromTheField() {
-  return (
-    <FromTheFieldContent />
-  );
+  const posts = getBlogPosts();
+  return <FromTheFieldContent posts={posts} />;
 }
