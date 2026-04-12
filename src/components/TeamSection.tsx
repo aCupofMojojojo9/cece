@@ -53,12 +53,14 @@ export default function TeamSection() {
                   image={member.image}
                   alt={member.name}
                   sx={{
-                    width: 180,
-                    height: 180,
-                    borderRadius: '50%',
+                    width: 200,
+                    height: 200,
+                    borderRadius: '12px',
                     objectFit: "cover",
-                    boxShadow: 2,
+                    objectPosition: "top center",
+                    boxShadow: 3,
                     mb: { xs: 2, md: 0 },
+                    flexShrink: 0,
                   }}
                 />
                 <Box
